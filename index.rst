@@ -1,21 +1,53 @@
-.. toctree::
-   :maxdepth: 2
+****************************
+Python w teorii i w praktyce
+****************************
 
-   _sources/zanim-zaczniemy.rst
-   _sources/o-jezyku-python.rst
-   _sources/wprowadzenie-do-jezyka.rst
-   _sources/typy-danych.rst
-   _sources/podstawowe-konstrukcje-jezyka.rst
-   _sources/modularyzacja.rst
-   _sources/programowanie-obiektowe.rst
-   _sources/django.rst
-   _sources/dobre-praktyki.rst
-   _sources/watki-i-procesy.rst
-   _sources/biblioteki-zewnetrzne.rst
-   _sources/system-operacyjny.rst
-   _sources/biblioteka-standardowa.rst
-   _sources/tworzenie-dokumentacji.rst
-   _sources/programowanie-sieciowe.rst
-   _sources/programowanie-gui.rst
-   _sources/testy.rst
-   _sources/python-2vs3.rst
+by `Matt Harasymczuk <http://mattagile.com>`_
+
+Spis Treści
+===========
+
+.. toctree::
+   :maxdepth: 3
+   :numbered:
+   :caption: Wstęp
+   :name: wstep
+
+   wstep/zanim-zaczniemy.rst
+   wstep/o-jezyku-python.rst
+   wstep/python-2vs3.rst
+   wstep/wprowadzenie-do-jezyka.rst
+
+.. toctree::
+   :maxdepth: 3
+   :numbered:
+   :caption: Python w teorii
+   :name: python-w-teorii
+
+   python-w-teorii/typy-danych.rst
+   python-w-teorii/podstawowe-konstrukcje-jezyka.rst
+   python-w-teorii/modularyzacja.rst
+
+   python-w-teorii/programowanie-obiektowe.rst
+   python-w-teorii/watki-i-procesy.rst
+
+   python-w-teorii/dobre-praktyki.rst
+   python-w-teorii/tworzenie-dokumentacji.rst
+
+   python-w-teorii/zadania.rst
+
+.. toctree::
+   :maxdepth: 3
+   :numbered:
+   :caption: Python w praktyce
+   :name: python-w-praktyce
+
+   python-w-praktyce/biblioteka-standardowa.rst
+   python-w-praktyce/system-operacyjny.rst
+
+   python-w-praktyce/biblioteki-zewnetrzne.rst
+   python-w-praktyce/programowanie-sieciowe.rst
+   python-w-praktyce/django.rst
+
+   python-w-praktyce/testy.rst
+   python-w-praktyce/programowanie-gui.rst
