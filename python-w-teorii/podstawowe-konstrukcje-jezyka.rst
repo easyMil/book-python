@@ -138,7 +138,7 @@ Rozpakowywanie wartości zwracanych
 .. code:: python
 
     value, _ = function()
-    value, \*args = function()
+    value, *args = function()
 
 
 Funkcje wbudowane
