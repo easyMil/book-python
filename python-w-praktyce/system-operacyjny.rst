@@ -5,8 +5,8 @@ System Operacyjny
 ``eval``
 ========
 
-sys.platform
-============
+``sys.platform``
+================
 
 ``sys.exit()``
 ==============
