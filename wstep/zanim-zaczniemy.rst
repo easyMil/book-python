@@ -179,3 +179,9 @@ Aby zobaczyć zainstalowane paczki, użyj polecenia ``pip freeze``. Przekierowuj
     pip freeze > requirements.txt
 
 Więcej na temat instalowania paczek, modularyzacji itp. znajdziesz w rozdziale tej książki poświęconym temu tematowi.
+
+
+Gdzie mogę szukać ciekawych informacji
+======================================
+
+* http://www.infoq.com/python/

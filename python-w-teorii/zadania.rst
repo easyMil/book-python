@@ -8,7 +8,7 @@ Powielanie napisów
 :Nazwa skryptu: ``bin/powielanie-napisow.py``
 :Uruchamianie: ``python bin/powielanie-napisow.py``
 
-Napisz program, który wczyta od użytkownika pewien napis, a następnie wyświetli 30 kopii tego napisu, każda w osobnej linii.
+Napisz program, który wczyta od użytkownika pewien napis, a następnie wyświetli 30 kopii tego napisu, każda w osobnej linii.
 
 Napisz trzy wersje tego programu:
 
@@ -29,7 +29,7 @@ Parzystość
 :Nazwa skryptu: ``bin/parzystosc.py``
 :Uruchamianie: ``python bin/parzystosc.py``
 
-Napisz program, który wczyta od użytkownika liczbę całkowitą i wyświetli informację, czy jest to liczba parzysta, czy nieparzysta.
+Napisz program, który wczyta od użytkownika liczbę całkowitą i wyświetli informację, czy jest to liczba parzysta, czy nieparzysta.
 
 Liczby całkowite
 ----------------
@@ -37,7 +37,7 @@ Liczby całkowite
 :Nazwa skryptu: ``bin/calkowite.py``
 :Uruchamianie: ``python bin/calkowite.py``
 
-Napisz program, który wczyta od użytkownika liczbę i wyświetli informację, czy jest to liczba całkowita, czy niecałkowita.
+Napisz program, który wczyta od użytkownika liczbę i wyświetli informację, czy jest to liczba całkowita, czy niecałkowita.
 
 
 Dzienniczek ucznia
@@ -46,13 +46,17 @@ Dzienniczek ucznia
 :Nazwa skryptu: ``bin/oceny.py``
 :Uruchamianie: ``python bin/oceny.py``
 
-Napisz program, który wczytuje od użytkownika kolejne oceny i:
+Napisz program, który wczytuje od użytkownika kolejne oceny i:
 
-* sprawdza czy wprowadzona ocena jest na liście dopuszczalnych na wydziale ocen
-* jeżeli ocena jest na liście dopuszczalnych na wydziale ocen, dodaje ją na listę otrzymanych ocen
-* jeżeli wciśnięto sam Enter, oznacza to koniec listy otrzymanych ocen
-* wyświetla wyliczoną dla listy otrzymanych ocen średnią arytmetyczną.
+* sprawdza czy wprowadzona ocena jest na liście dopuszczalnych na wydziale ocen
+* jeżeli ocena jest na liście dopuszczalnych na wydziale ocen, dodaje ją na listę otrzymanych ocen
+* jeżeli wpisano cyfrę nie znjadującą się na liście, wyświetl informację i zakończ wpisywanie
+* wyświetla wyliczoną dla listy otrzymanych ocen średnią arytmetyczną.
 
+Zadanie z gwiazdką
+------------------
+
+* jeżeli wciśnięto sam Enter, oznacza to koniec listy otrzymanych ocen
 
 Przeliczenia trygonometryczne
 =============================
@@ -60,7 +64,7 @@ Przeliczenia trygonometryczne
 :Nazwa skryptu: ``bin/trygonometria.py``
 :Uruchamianie: ``python bin/trygonometria.py``
 
-Napisz program, który wczyta od użytkownika wielkość kąta w stopniach i wyświetli wartość czterech podstawowych funkcji trygonometrycznych (sin, cos, tg, ctg) o ile dla danego kąta jest to możliwe.
+Napisz program, który wczyta od użytkownika wielkość kąta w stopniach i wyświetli wartość czterech podstawowych funkcji trygonometrycznych (sin, cos, tg, ctg) o ile dla danego kąta jest to możliwe.
 
 
 Wyrazy
@@ -69,7 +73,7 @@ Wyrazy
 :Nazwa skryptu: ``bin/podzial-wyrazow.py``
 :Uruchamianie: ``python bin/podzial-wyrazow.py``
 
-Napisz program, który wczyta od użytkownika pewien tekst, a następnie podzieli go na zdania (zakładamy, że jednoznacznie kropka rozdziela zdania) i dla każdego zdania wyświetli ile jest w nim wyrazów (zakładamy, że spacja oddziela wyrazy w zdaniu).
+Napisz program, który wczyta od użytkownika pewien tekst, a następnie podzieli go na zdania (zakładamy, że jednoznacznie kropka rozdziela zdania) i dla każdego zdania wyświetli ile jest w nim wyrazów (zakładamy, że spacja oddziela wyrazy w zdaniu).
 
 
 Lotto
@@ -78,7 +82,7 @@ Lotto
 :Nazwa skryptu: ``bin/lotto.py``
 :Uruchamianie: ``python bin/lotto.py``
 
-Napisz program, który wyświetli 6 losowych i nie powtarzających się liczb z zakresu od 1 do 49.
+Napisz program, który wyświetli 6 losowych i nie powtarzających się liczb z zakresu od 1 do 49.
 
 
 Przeliczanie temperatury
@@ -87,7 +91,7 @@ Przeliczanie temperatury
 :Nazwa skryptu: ``bin/temperatura.py``
 :Uruchamianie: ``python bin/temperatura.py``
 
-Woda zamarza przy 32 stopniach Fahrenheita, a wrze przy 212 stopniach Fahrenheita. Napisz program, który wyświetli tabelę przeliczeń stopni Celsjusza na stopnie Fahrenheita w zakresie od –20 do +40 stopni Celsjusza (co 5 stopni). Pamiętaj o wyświetlaniu znaku plus/minus przy temperaturze.
+Woda zamarza przy 32 stopniach Fahrenheita, a wrze przy 212 stopniach Fahrenheita. Napisz program, który wyświetli tabelę przeliczeń stopni Celsjusza na stopnie Fahrenheita w zakresie od –20 do +40 stopni Celsjusza (co 5 stopni). Pamiętaj o wyświetlaniu znaku plus/minus przy temperaturze.
 
 * Fahrenheit to Celsius: (°F - 32) / 1.8 = °C
 * Celsius to Fahrenheit: (°C * 1.8) + 32 = °F
@@ -131,7 +135,7 @@ Pole trójkąta
 :Nazwa skryptu: ``bin/pole-trojkata.py``
 :Uruchamianie: ``python bin/pole-trojkata.py``
 
-Napisz program, który obliczy pole trójkąta, pod warunkiem że użytkownik poda wysokość i długość podstawy tego trójkąta. Uwzględnij, że wysokość i długość podstawy mogą być liczbami niecałkowitymi.
+Napisz program, który obliczy pole trójkąta, pod warunkiem że użytkownik poda wysokość i długość podstawy tego trójkąta. Uwzględnij, że wysokość i długość podstawy mogą być liczbami niecałkowitymi.
 Wykorzystaj doctest do przetestowania funckji.
 
 
@@ -144,7 +148,7 @@ Wersja prosta
 :Nazwa skryptu: ``bin/srednia.py``
 :Uruchamianie: ``python bin/srednia.py``
 
-Zdefiniuj funkcję "avg", która dla dowolnej liczby parametrów zwróci ich średnią arytmetyczną (lub 0 dla 0 parametrów).
+Zdefiniuj funkcję ``avg()``, która dla dowolnej liczby parametrów zwróci ich średnią arytmetyczną (lub 0 dla 0 parametrów).
 
 Wersja trudniejsza
 ------------------
@@ -164,11 +168,11 @@ Konwersja liczby na zapis słowny
 Wersja prosta
 -------------
 
-Napisz program "numer.py``", który zamieni wprowadzony przez użytkownika ciąg cyfr na formę tekstową:
+Napisz program "numer.py``", który zamieni wprowadzony przez użytkownika ciąg cyfr na formę tekstową:
 
-* znaki nie będące cyframi mają być ignorowane
+* znaki nie będące cyframi mają być ignorowane
 * konwertujemy cyfry, nie liczby, a zatem:
-  * 911 to "dziewięć jeden jeden"
+  * 911 to "dziewięć jeden jeden"
   * 1100 to "jeden jeden zero zero"
 
 Wersja trudniejsza
@@ -197,7 +201,7 @@ Rzymskie
 :Nazwa skryptu: ``bin/rzymskie.py``
 :Uruchamianie: ``python bin/rzymskie.py``
 
-Napisz program, który przeliczy wprowadzoną liczbę rzymską na jej postać dziesiętną.
+Napisz program, który przeliczy wprowadzoną liczbę rzymską na jej postać dziesiętną.
 
 Zrób drugą funkcję, która dokona procesu odwrotnego.
 
@@ -207,12 +211,12 @@ Zrób drugą funkcję, która dokona procesu odwrotnego.
 :Nazwa skryptu: ``bin/funkcyjne.py``
 :Uruchamianie: ``python bin/funkcyjne.py``
 
-Używając generatora zbuduj listę zawierającą wszystkie liczby podzielne przez 3 z zakresu od 1 do 33.
+Używając generatora zbuduj listę zawierającą wszystkie liczby podzielne przez 3 z zakresu od 1 do 33.
 
-Następnie:
-* Używając funkcji filter usuń z niej wszystkie liczby parzyste
-* Używając wyrażenia lambda i funkcji map podnieś wszystkie elementy tak otrzymanej listy do sześcianu
-* Odpowiednio używając funkcji reduce i len oblicz średnią arytmetyczną z elementów tak otrzymanej listy.
+Następnie:
+* Używając funkcji filter usuń z niej wszystkie liczby parzyste
+* Używając wyrażenia lambda i funkcji map podnieś wszystkie elementy tak otrzymanej listy do sześcianu
+* Odpowiednio używając funkcji reduce i len oblicz średnią arytmetyczną z elementów tak otrzymanej listy.
 
 
 Zawartość pliku
@@ -221,7 +225,7 @@ Zawartość pliku
 :Nazwa skryptu: ``bin/zawartosc-pliku.py``
 :Uruchamianie: ``python bin/zawartosc-pliku.py``
 
-Napisz program, który wyświetli na ekranie zawartość pliku o nazwie podanej przez użytkownika.
+Napisz program, który wyświetli na ekranie zawartość pliku o nazwie podanej przez użytkownika.
 
 
 Książka adresowa

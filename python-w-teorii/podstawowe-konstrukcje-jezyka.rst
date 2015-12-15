@@ -46,38 +46,11 @@ Kolejność operatorów
 --------------------
 
 * modulo
-* // i **
+* ``//`` i ``**``
 * przypisania i porównania
-* +=
+* ``+=``
+* ``in`` i ``not in``
 
-
-
-
-
-.. code:: python
-
-   operator: in
-   operator: not in
-
-
-Funkcje
-=======
-
-* Definiowanie funkcji
-* Konwencja nazewnicza funkcji
-* Funkcje wieloargumentowe
-* Parametry nazwane
-* Parametry z wartością domyślną
-* Funkcje z operatorem * i ** w deklaracji
-* operator * i ** jako parametr
-* dekoratory
-* closures
-* introspekcja
-* zwracanie wartości
-* zwracanie obiektów
-* value, \*args = function()
-* używanie _\* \*
-* lambda
 
 Podstawowe konstrukcje
 ======================
@@ -97,7 +70,6 @@ Wybitnie użyteczne pętla ``for``
 ``while``
 ---------
 
-
 Słowa kluczowe
 ==============
 
@@ -113,9 +85,6 @@ Słowa kluczowe
 ``return``
 ----------
 
-``yield``
----------
-
 ``sorted``
 ----------
 
@@ -126,10 +95,50 @@ Słowa kluczowe
 ----------------
 
 ``__file__``
--------------
+------------
 
 ``__name__``
--------------
+------------
+
+
+Funkcje
+=======
+
+Definiowanie funkcji
+--------------------
+
+Konwencja nazewnicza funkcji
+----------------------------
+
+* CamelCase? Nie?! Używanie ``_`` w nazwach
+* Funkcje o nazwie zaczynającej się od ``_``
+* Nazwy opisowe funkcji
+
+Argumenty do funkcji
+--------------------
+
+Argumenty nazwane
+-----------------
+
+Argumenty z wartością domyślną
+------------------------------
+
+Argumenty ``*args``, ``**kwargs``
+---------------------------------
+
+Zwracanie wartości prostych
+---------------------------
+
+Zwracanie typów złożonych
+-------------------------
+
+Rozpakowywanie wartości zwracanych
+----------------------------------
+
+.. code:: python
+
+    value, _ = function()
+    value, *args = function()
 
 
 Funkcje wbudowane
@@ -144,11 +153,44 @@ Funkcje wbudowane
 ``len()``
 ---------
 
-``join()``
+``input()``
+-----------
+
+
+Print formatting
+================
+
+Stary styl
 ----------
 
-``raw_input()``
----------------
+* kolejnościowe
+* nazwane
+* typy: ``string``, ``int``, ``float``
+* operatory na stringu
+
+``.format()`` - nowy styl
+-------------------------
+
+* ``string``
+* ``int``
+* ``float``
+* operatory na stringu
+* jako parametry do ``print("string", **args)``
+
+Programowanie funkcyjne
+=======================
+
+lambda
+------
+
+closure
+-------
+
+decorator
+---------
+
+złożenia funkcji
+----------------
 
 ``map()``
 ---------
@@ -158,21 +200,6 @@ Funkcje wbudowane
 
 ``filter()``
 ------------
-
-Print formatting
-================
-
-* stary styl
-  * kolejnościowe
-  * nazwane
-  * typy: string, int, float
-  * operatory na stringu
-  * .format() - nowy styl
-  * string
-  * int
-  * float
-  * operatory na stringu
-* jako parametry do print("string", \*\*args)
 
 
 Pliki
@@ -219,8 +246,11 @@ Lazy evaluation
 Iteratory
 ---------
 
+introspekcja
+------------
+
 Wyrażenia regularne
-====================
+===================
 
 Konstruowanie wyrażeń
 ---------------------
@@ -229,10 +259,10 @@ Wyciąganie parametrów (zmiennych)
 ---------------------------------
 
 ``match()``
-----------------------------
+-----------
 
 ``search()``
-------------------------------
+------------
 
 ``findall()`` i ``finditer()``
 ------------------------------
@@ -246,9 +276,107 @@ Wyjątki
 Po co są wyjątki?
 -----------------
 
-Rodzaje wyjątków
-----------------
+Najpopularniejsze wyjątki
+-------------------------
+
++---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| Nazwa wyjątku       | Opis                                                                                                                                                                                                                                                                                                |
++=====================+=====================================================================================================================================================================================================================================================================================================+
+| AttributeError      | Raised when an attribute reference (see Attribute references) or assignment fails. (When an object does not support attribute references or attribute assignments at all, TypeError is raised.)                                                                                                     |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| ImportError         | Raised when an import statement fails to find the module definition or when a from ... import fails to find a name that is to be imported.                                                                                                                                                          |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IndexError          | Raised when a sequence subscript is out of range. (Slice indices are silently truncated to fall in the allowed range; if an index is not an integer, TypeError is raised.)                                                                                                                          |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| KeyError            | Raised when a mapping (dictionary) key is not found in the set of existing keys.                                                                                                                                                                                                                    |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| KeyboardInterrupt   | Raised when the user hits the interrupt key (normally Control-C or Delete). During execution, a check for interrupts is made regularly. The exception inherits from BaseException so as to not be accidentally caught by code that catches Exception and thus prevent the interpreter from exiting. |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| NameError           | Raised when a local or global name is not found. This applies only to unqualified names. The associated value is an error message that includes the name that could not be found.                                                                                                                   |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| NotImplementedError | This exception is derived from RuntimeError. In user defined base classes, abstract methods should raise this exception when they require derived classes to override the method.                                                                                                                   |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| RuntimeError        | Raised when an error is detected that doesn’t fall in any of the other categories. The associated value is a string indicating what precisely went wrong.                                                                                                                                           |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| SyntaxError         | Raised when the parser encounters a syntax error. This may occur in an import statement, in a call to the built-in functions exec() or eval(), or when reading the initial script or standard input (also interactively).                                                                           |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| IndentationError    | Base class for syntax errors related to incorrect indentation. This is a subclass of SyntaxError.                                                                                                                                                                                                   |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+| TypeError           | Raised when an operation or function is applied to an object of inappropriate type. The associated value is a string giving details about the type mismatch.                                                                                                                                        |
++---------------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Przechwytywanie wyjątków
 ------------------------
-``try, catch, finally``
+
+* ``try``
+* ``catch``
+* ``finally``
+
+Hierarchia wyjątków
+-------------------
+
+.. code::
+
+    BaseException
+     +-- SystemExit
+     +-- KeyboardInterrupt
+     +-- GeneratorExit
+     +-- Exception
+          +-- StopIteration
+          +-- StopAsyncIteration
+          +-- ArithmeticError
+          |    +-- FloatingPointError
+          |    +-- OverflowError
+          |    +-- ZeroDivisionError
+          +-- AssertionError
+          +-- AttributeError
+          +-- BufferError
+          +-- EOFError
+          +-- ImportError
+          +-- LookupError
+          |    +-- IndexError
+          |    +-- KeyError
+          +-- MemoryError
+          +-- NameError
+          |    +-- UnboundLocalError
+          +-- OSError
+          |    +-- BlockingIOError
+          |    +-- ChildProcessError
+          |    +-- ConnectionError
+          |    |    +-- BrokenPipeError
+          |    |    +-- ConnectionAbortedError
+          |    |    +-- ConnectionRefusedError
+          |    |    +-- ConnectionResetError
+          |    +-- FileExistsError
+          |    +-- FileNotFoundError
+          |    +-- InterruptedError
+          |    +-- IsADirectoryError
+          |    +-- NotADirectoryError
+          |    +-- PermissionError
+          |    +-- ProcessLookupError
+          |    +-- TimeoutError
+          +-- ReferenceError
+          +-- RuntimeError
+          |    +-- NotImplementedError
+          |    +-- RecursionError
+          +-- SyntaxError
+          |    +-- IndentationError
+          |         +-- TabError
+          +-- SystemError
+          +-- TypeError
+          +-- ValueError
+          |    +-- UnicodeError
+          |         +-- UnicodeDecodeError
+          |         +-- UnicodeEncodeError
+          |         +-- UnicodeTranslateError
+          +-- Warning
+               +-- DeprecationWarning
+               +-- PendingDeprecationWarning
+               +-- RuntimeWarning
+               +-- SyntaxWarning
+               +-- UserWarning
+               +-- FutureWarning
+               +-- ImportWarning
+               +-- UnicodeWarning
+               +-- BytesWarning
+               +-- ResourceWarning
