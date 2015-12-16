@@ -204,6 +204,30 @@ closure
 decorator
 ---------
 
+* Modify arguments
+* Modify returned value
+* Do things before call
+* Do things after call
+* Avoid calling
+* Modify global state
+* Metadata
+
+.. code:: python
+
+    def my_decorator(f):
+        def wrapper(*args, **kwargs):
+            return f(*args, **kwargs)
+        return wrapper
+
+    @my_decorator
+    def func(x):
+        return x
+
+.. code:: python
+
+    func = my_decorator(f)
+
+
 złożenia funkcji
 ----------------
 
