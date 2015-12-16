@@ -147,6 +147,10 @@ Uproszczoną implementację takiego rozwiązania można przedstawić w następu
 W dalszej części omówimy poszczególne elementy, które są tu wymienione.
 
 
+PYTHON_PATH
+===========
+
+
 Virtualenv
 ==========
 
