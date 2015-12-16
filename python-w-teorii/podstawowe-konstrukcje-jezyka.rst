@@ -264,6 +264,17 @@ Generatory
 List comprahention
 ------------------
 
+.. code:: python
+
+    [x*x for x in range(0, 30) if x % 2]
+
+Generator expressions
+---------------------
+
+.. code:: python
+
+    (x*x for x in range(0, 30) if x % 2)
+
 Operator ``yield``
 ------------------
 
