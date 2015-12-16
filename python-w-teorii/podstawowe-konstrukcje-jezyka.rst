@@ -284,6 +284,9 @@ Lazy evaluation
 Iteratory
 ---------
 
+* ``__next__()``
+* ``raise StopIteration``
+
 introspekcja
 ------------
 
