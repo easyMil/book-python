@@ -51,3 +51,5 @@ Spis Treści
 
    python-w-praktyce/testy.rst
    python-w-praktyce/programowanie-gui.rst
+
+   python-w-praktyce/zadania.rst
