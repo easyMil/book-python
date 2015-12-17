@@ -189,3 +189,4 @@ Gdzie mogę szukać ciekawych informacji
 ======================================
 
 * http://www.infoq.com/python/
+* http://pyvideo.org/
