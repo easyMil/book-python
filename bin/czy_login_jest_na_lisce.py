@@ -19,6 +19,5 @@ def czy_login_jest_na_liscie(login, lista, *args, **kwargs):
         return False
 
 
-
 czy_login_jest_na_liscie(login='xxx', lista=['xxx', 'aaa'])
 czy_login_jest_na_liscie('xxx', ['xxx', 'aaa'])

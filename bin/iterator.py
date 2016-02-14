@@ -1,19 +1,16 @@
 for znak in 'python':
     print(znak)
 
-
 for liczba in [1, 2, 3, 4]:
     print(liczba)
 
-for key, value in [(0,0), (1,1), (1,2)]:
+for key, value in [(0, 0), (1, 1), (1, 2)]:
     print('%s -> %s' % (key, value))
 
 slownik = {'x': 1, 'y': 2}
 
 for key in slownik:
     print(slownik.get(key))
-
-
 
 
 class ListaFigurGeometrycznych:

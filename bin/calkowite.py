@@ -2,6 +2,7 @@
 Napisz program, który wczyta od użytkownika liczbę i wyświetli informację, czy jest to liczba całkowita, czy niecałkowita.
 """
 
+
 def czy_liczba_jest_calkowita(liczba):
     """
     >>> czy_liczba_jest_calkowita(0)

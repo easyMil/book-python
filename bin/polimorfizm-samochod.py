@@ -20,20 +20,18 @@ class Pojazd:
 class Monocykl(Pojazd):
     ilosc_kol = 1
 
+
 class Motocykl(Pojazd):
     ilosc_kol = 2
 
+
 class Samochod(Pojazd):
     ilosc_kol = 4
+
 
 class Tir(Pojazd):
     ilosc_kol = 16
 
 
-
-
-
 audi = Monocykl()
 audi.zostaw_slad()
-
-

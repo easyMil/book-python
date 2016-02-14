@@ -1,8 +1,10 @@
 imie = 'Piotr'
 wiek = 18
 
+
 def get_imie(imie):
     return imie
+
 
 """
 print('Cześć ' + imie + '!')
@@ -22,7 +24,6 @@ print('%(imie)s ma %(wiek)d lat' % {
 print('Hej, mam na imię %(imie)s.' % locals())
 """
 
-
 """
 print('{imie} ma {wiek} lat'.format(
         imie=imie,
@@ -39,9 +40,11 @@ osoby_w_klasie = [
     {'username': 'jsenator', 'czy_wykladowca': False},
 ]
 
+
 def wykladowca_tak_czy_nie(czy_jest_wykladowca):
     if not czy_jest_wykladowca:
         return 'nie'
+
 
 """
 for osoba in osoby_w_klasie:
@@ -65,13 +68,11 @@ ciag_znakow = 'Cześć {imie}, jak się masz? słyszałem, że dziśkończysz {w
 print(ciag_znakow)
 """
 
-
 username = 'mharasymczuk'
 password = "Python123"
 password = "' OR 1=1 --"
 password = "' OR 1=1 UNION SELECT id, username, password from users --"
 password = "' OR 1=1; DROP TABLE users --"
-
 
 # podatne na sql injection
 sql_query = """
@@ -83,9 +84,7 @@ sql_query = """
 
 """.format(username=username, password=password)
 
-
 print(sql_query)
-
 
 # TODO: :)
 
@@ -95,4 +94,3 @@ sql_query = prepare("""
     WHERE 'username' = ?
     AND 'password' = ?
 """)
-

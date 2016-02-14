@@ -18,10 +18,10 @@ def czytaj_passwd():
                     yield login
 
 
-#zawartosc = czytaj_passwd()
-#print(sys.getsizeof(zawartosc))
-#pprint(list(zawartosc))
-#sys.exit()
+# zawartosc = czytaj_passwd()
+# print(sys.getsizeof(zawartosc))
+# pprint(list(zawartosc))
+# sys.exit()
 
 
 def czytaj_passwd_tradycyjnie():
@@ -36,9 +36,9 @@ def czytaj_passwd_tradycyjnie():
         return tresc_pliku
 
 
-#zawartosc_tradycyjna = czytaj_passwd_tradycyjnie()
-#print(zawartosc_tradycyjna)
-#print(sys.getsizeof(zawartosc_tradycyjna))
+# zawartosc_tradycyjna = czytaj_passwd_tradycyjnie()
+# print(zawartosc_tradycyjna)
+# print(sys.getsizeof(zawartosc_tradycyjna))
 
 
 """

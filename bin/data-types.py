@@ -2,7 +2,6 @@
 
 import datetime
 
-
 db_rows = [
     {"id": 1, "name": "Matt", "last_name": "Harasymczuk", 'xxx': datetime.datetime(2015, 12, 14, 16, 15, 21, 468157)},
     {"id": 2, "name": "Katarzyna", "last_name": "Kurek", 'xxx': datetime.datetime(2015, 12, 14, 16, 15, 21, 468157)},

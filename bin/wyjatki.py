@@ -25,6 +25,7 @@ except ValueError:
 print(liczba)
 """
 
+
 class PlikJestPustyError(Exception):
     def __init__(self, error):
         print('asdasdasdasdasd')
@@ -42,5 +43,5 @@ def zawartosc_pliku(nazwa_pliku):
         else:
             raise PlikJestPustyError('Plik jest pusty')
 
-#print(zawartosc_pliku('/tmp/tymczasowy'))
-#print(siema)
+            # print(zawartosc_pliku('/tmp/tymczasowy'))
+            # print(siema)

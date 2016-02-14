@@ -10,6 +10,7 @@ Napisz trzy wersje tego programu:
 Napisz doctest do takiej funkcji.
 """
 
+
 def kopie_napisu_1(napis):
     """
     >>> kopie_napisu_1('Hello World')
@@ -74,9 +75,9 @@ def kopie_napisu_6(napis):
     print(ciag_znakow * 30)
 
 
-#kopie_napisu_1('Hello World')
-#kopie_napisu_2('Hello World')
-#kopie_napisu_3('Hello World')
-#kopie_napisu_4('Hello World')
-#kopie_napisu_5('Hello World')
+# kopie_napisu_1('Hello World')
+# kopie_napisu_2('Hello World')
+# kopie_napisu_3('Hello World')
+# kopie_napisu_4('Hello World')
+# kopie_napisu_5('Hello World')
 kopie_napisu_6('Hello World')
