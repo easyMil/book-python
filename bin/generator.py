@@ -98,7 +98,6 @@ def uczestnicy_kursu(osoby):
                 'wykladowcy': jest_wykladowca,
                 'uczestnicy': [x for x in osoby if not x['czy_wykladowca']],
                 'wszystkie_username': [x['username'] for x in osoby]
-
             }
 
 
