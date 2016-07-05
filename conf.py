@@ -55,7 +55,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'The Book of Python'
-copyright = '2015, Matt Harasymczuk'
+copyright = '2015-2016, Matt Harasymczuk'
 author = 'Matt Harasymczuk'
 
 # The version info for the project you're documenting, acts as replacement for
