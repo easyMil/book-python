@@ -5,7 +5,7 @@ Zadania
 REST API
 ========
 
-Używając biblioteki standardowej w Pythonie zaciągnij informacje o repozytoriach użytkownika MattAgile na Github.com
+Używając biblioteki standardowej w Pythonie zaciągnij informacje o repozytoriach użytkownika Django na https://github.com
 
 * https://github.com/django/django/commits/master
 * Następnie z przeglądnij listę z poziomu Pythona i znajdź URL dla repozytorium ``django``.
