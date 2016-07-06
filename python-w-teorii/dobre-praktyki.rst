@@ -395,7 +395,7 @@ Korzystanie z help()
 Kilka przykaładów z praktyki
 ============================
 
-``html.append(['<tag>'])``
+``html.append('<tag>')``
 --------------------------
 
 Magic number i Magic string
