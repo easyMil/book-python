@@ -1,3 +1,4 @@
+*.icloud
 .coverage/
 __pycache__/
 .virtualenv/

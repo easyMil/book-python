@@ -28,8 +28,14 @@ def run(command, timeout=1):
             log.error(errors)
 
         if output:
-            log.debug(output)
-            return output
+            # red = '\033[00;31m'
+            # green = '\033[00;32m'
+            # blue = '\033[00;36m'
+            # white = '\033[00;39m'
+            message = output.decode()
+
+            log.debug('Output: {message}'.format(**locals()))
+            return message
 
 
 for command in root.findall('./command'):
