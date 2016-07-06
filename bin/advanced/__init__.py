@@ -36,11 +36,15 @@ class ProstokatTest(unittest.TestCase):
     def test_ustawienia_bokow(self):
         with self.assertRaises(TypeError):
             Prostokat(a=0)
+        with self.assertRaises(TypeError):
             Prostokat(b=0)
 
     def test_dlugosci_bokow(self):
         with self.assertRaises(ValueError):
             Prostokat(a=-1, b=-2)
+
+    def test_prostokat_to_string(self):
+        self.assertEqual(str(self.prostokat), 'Prostokat(a=5.0, b=10.0)')
 
 
 if __name__ == '__main__':
