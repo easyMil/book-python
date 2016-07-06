@@ -378,7 +378,8 @@ Przechwytywanie wyjątków
 ------------------------
 
 * ``try``
-* ``catch``
+* ``except``
+* ``else``
 * ``finally``
 
 Hierarchia wyjątków
