@@ -389,8 +389,26 @@ Zen Pythona
 ``Pyflakes``
 ============
 
-Korzystanie z help()
-====================
+``Coverage``
+============
+
+.. code:: bash
+
+    coverage run FILENAME.py
+    coverage report -m
+
+``PEP8``
+========
+
+``unittest``
+============
+
+.. code:: bash
+
+    python -m unittest FILENAME.py
+
+Korzystanie z help(), dir() i object.__dict__
+=============================================
 
 Kilka przykaładów z praktyki
 ============================
