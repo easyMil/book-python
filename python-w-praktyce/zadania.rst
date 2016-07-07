@@ -45,3 +45,15 @@ Uwaga, nigdy nie rób tego na produkcji bez tzw. sanityzacji parametrów, np. li
 * stwórz dekorator ``localhost_only``, który będzie sprawdzał IP źródłowe połączenia i jeżeli nie pochodzi z ``127.0.0.1`` odmówi wykonania polecenia
 * stwórz dekorator ``log_request``, który weźmie parametry zapytania (IP, polecenie, argumenty) i zapisze je do pliku ``/tmp/botnet.log`` w formacie ``Request from IP:PORT to execute COMMAND ARGUMENTS``
 
+Wielowątkowość
+==============
+
+* Stwórz kolejkę ``queue`` do której dodasz różne polecenia systemowe do wykonania, np. ``['/bin/ls /etc/', '/bin/echo "test"', '/bin/sleep 2']``.
+* Następnie przygotuj trzy wątki workerów, które będą wykonywały polecenia z kolejki.
+* Wątki powinny być uruchamiane jako ``subprocess`` w systemie operacyjnym z timeoutem równym ``PROCESSING_TIMEOUT = 2.0`` sekundy
+* Ilość poleceń może się zwiększać w miarę wykonywania zadania.
+* Wątki powinny być uśpione za pomocą ``Timer`` przez 5.0 sekund, a następnie ruszyć do roboty.
+* Wątki mają być uruchomione w tle (ang. ``daemon``)
+* Użyj logowania za pomocą biblioteki ``logging`` tak aby przy wyświetlaniu wyników widoczny był identyfikator procesu i wątku
+* Napisz testy do workerów i kolejki
+

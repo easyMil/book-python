@@ -1,3 +1,4 @@
+*.pyc
 *.icloud
 .coverage/
 __pycache__/
