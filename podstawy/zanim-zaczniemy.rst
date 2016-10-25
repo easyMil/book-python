@@ -161,7 +161,7 @@ Tworzenie takiego środowiska jest bardzo łatwe i szybkie:
 .. code:: bash
 
     pyvenv .virtualenv
-    
+
 lub na Windowsie:
 
 .. code:: bat
@@ -173,7 +173,7 @@ I po chwili w pojawi się katalog .virtualenv ze środowiskiem. Następnie za ka
 .. code:: bash
 
     source .virtualenv/bin/activate
-    
+
 lub na Windowsie:
 
 .. code:: bat
@@ -188,11 +188,19 @@ Aby zainstalować jakieś nowe paczki należy użyć polecenia ``pip``. Od wers
 
     pip install pep8
 
+lub na Windows:
+
+    python -m pip install pep8
+
 Aby zobaczyć zainstalowane paczki, użyj polecenia ``pip freeze``. Przekierowując wynik tego polecenia do pliku ``requirements.txt`` stworzysz listę zależności wraz z wersjami, które są niezbędne dla uruchomienia Twojego programu.
 
 .. code:: bash
 
     pip freeze > requirements.txt
+
+lub na Windows:
+
+    python -m pip install pep8
 
 Więcej na temat instalowania paczek, modularyzacji itp. znajdziesz w rozdziale tej książki poświęconym temu tematowi.
 

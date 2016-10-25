@@ -2,7 +2,7 @@
 Python w teorii i w praktyce
 ****************************
 
-by `Matt Harasymczuk <http://mattagile.com>`_
+by `Matt Harasymczuk <http://astrotech.io>`_
 
 Spis Treści
 ===========
@@ -10,46 +10,42 @@ Spis Treści
 .. toctree::
    :maxdepth: 3
    :numbered:
-   :caption: Wstęp
-   :name: wstep
+   :caption: Python podstawy
+   :name: podstawy
 
-   wstep/zanim-zaczniemy.rst
-   wstep/o-jezyku-python.rst
-   wstep/python-2vs3.rst
-   wstep/wprowadzenie-do-jezyka.rst
 
-.. toctree::
-   :maxdepth: 3
-   :numbered:
-   :caption: Python w teorii
-   :name: python-w-teorii
+   podstawy/zanim-zaczniemy.rst
+   podstawy/o-jezyku-python.rst
+   podstawy/python-2vs3.rst
+   podstawy/wprowadzenie-do-jezyka.rst
 
-   python-w-teorii/typy-danych.rst
-   python-w-teorii/podstawowe-konstrukcje-jezyka.rst
-   python-w-teorii/modularyzacja.rst
+   podstawy/typy-danych.rst
+   podstawy/podstawowe-konstrukcje-jezyka.rst
+   podstawy/dobre-praktyki.rst
 
-   python-w-teorii/programowanie-obiektowe.rst
-   python-w-teorii/watki-i-procesy.rst
+   podstawy/wyjatki.rst
+   podstawy/regex.rst
+   podstawy/modularyzacja.rst
+   podstawy/programowanie-obiektowe.rst
+   podstawy/watki-i-procesy.rst
 
-   python-w-teorii/dobre-praktyki.rst
-   python-w-teorii/tworzenie-dokumentacji.rst
-
-   python-w-teorii/zadania.rst
+   podstawy/zadania.rst
 
 .. toctree::
    :maxdepth: 3
    :numbered:
-   :caption: Python w praktyce
-   :name: python-w-praktyce
+   :caption: Python zaawansowany
+   :name: zaawansowany
 
-   python-w-praktyce/biblioteka-standardowa.rst
-   python-w-praktyce/system-operacyjny.rst
+   zaawansowany/biblioteka-standardowa.rst
+   zaawansowany/system-operacyjny.rst
 
-   python-w-praktyce/biblioteki-zewnetrzne.rst
-   python-w-praktyce/programowanie-sieciowe.rst
-   python-w-praktyce/django.rst
+   zaawansowany/biblioteki-zewnetrzne.rst
+   zaawansowany/programowanie-sieciowe.rst
+   zaawansowany/django.rst
+   zaawansowany/tworzenie-dokumentacji.rst
 
-   python-w-praktyce/testy.rst
-   python-w-praktyce/programowanie-gui.rst
+   zaawansowany/testy.rst
+   zaawansowany/programowanie-gui.rst
 
-   python-w-praktyce/zadania.rst
+   zaawansowany/zadania.rst

@@ -18,8 +18,8 @@ Konwencja nazewnicza - ``main.py``
 ----------------------------------
 
 
-Paczkowanie
-===========
+Tworzenie paczek
+================
 
 ``setup.py``
 ------------
@@ -91,6 +91,9 @@ Paczkowanie
 ``python setup.py sdist upload``
 --------------------------------
 
+Instalacja i korzystanie z zewnętrznych bibliotek
+=================================================
+
 ``pip search``
 --------------
 
@@ -109,8 +112,8 @@ Paczkowanie
 ``distutils`` i ``setuptools``
 ------------------------------
 
-Przyszłość paczkowania
-----------------------
+Przyszłość paczkowania i dystrybucji
+====================================
 
 * https://www.youtube.com/watch?v=jOiAp3wtx18
 * https://www.youtube.com/watch?v=Oc9khbXBes8

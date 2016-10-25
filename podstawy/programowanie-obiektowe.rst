@@ -32,6 +32,9 @@ Dziedziczenie
 Dziedziczenie czy kompozycja?
 =============================
 
+Polimorfizm
+===========
+
 Klasy abstrakcyjne
 ==================
 

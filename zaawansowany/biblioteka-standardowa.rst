@@ -98,6 +98,9 @@ Biblioteka standardowa
 ``math``
 ========
 
+``statistics``
+==============
+
 ``random``
 ==========
 
