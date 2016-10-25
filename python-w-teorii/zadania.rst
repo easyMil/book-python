@@ -10,12 +10,13 @@ Powielanie napisów
 
 Napisz program, który wczyta od użytkownika pewien napis, a następnie wyświetli 30 kopii tego napisu, każda w osobnej linii.
 
+Do wczytywania od użytkownika użyj funkcji ``input('Podaj ciąg znaków: ')`` w Python 3 lub ``raw_input('Podaj ciąg znaków: ')`` dla Python 2.
+
 Napisz trzy wersje tego programu:
 
 * wykorzystując ``range()``
 * wykorzystując pętlę while
-* wykorzystując właściwości mnożenia stringów
-
+* wykorzystując właściwości mnożenia stringów ``print('ciag znakow' * 30)``
 
 Napisz doctest do takiej funkcji.
 
@@ -30,6 +31,8 @@ Parzystość
 :Uruchamianie: ``python bin/parzystosc.py``
 
 Napisz program, który wczyta od użytkownika liczbę całkowitą i wyświetli informację, czy jest to liczba parzysta, czy nieparzysta.
+
+Wykorzystaj dzielenie modulo. Zwróć uwagę, aby dzielone były dwie liczby, a nie stringi, bo będzie błąd podstawiania (operator ``%`` w ciągach znaków działa zupełnie inaczej!
 
 Liczby całkowite
 ----------------
