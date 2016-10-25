@@ -161,12 +161,24 @@ Tworzenie takiego środowiska jest bardzo łatwe i szybkie:
 .. code:: bash
 
     pyvenv .virtualenv
+    
+lub na Windowsie:
+
+.. code:: bat
+
+    python3 -m venv .virtualenv
 
 I po chwili w pojawi się katalog .virtualenv ze środowiskiem. Następnie za każdym razem kiedy będziesz chciał pracować wykorzystując to środowisko będzie konieczna jego aktywacja:
 
 .. code:: bash
 
     source .virtualenv/bin/activate
+    
+lub na Windowsie:
+
+.. code:: bat
+
+    .virtualenv\bin\activate.bat
 
 Każda instalacja pakietów oraz bibliotek wykona się w środowisku. Skrypt który uruchomisz wykorzysta właśnie te wersje, które masz w nim zainstalowane.
 
