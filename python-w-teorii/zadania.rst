@@ -56,10 +56,17 @@ Napisz program, który wczytuje od użytkownika kolejne oceny i:
 * jeżeli wpisano cyfrę nie znjadującą się na liście, wyświetl informację i zakończ wpisywanie
 * wyświetla wyliczoną dla listy otrzymanych ocen średnią arytmetyczną.
 
+Przydatne konstrukcje języka:
+
+* ``len()`` ``sum()``
+* ``in``
+* ``import statistics`` ``statistics.mean()``
+
 Zadanie z gwiazdką
 ------------------
 
 * jeżeli wciśnięto sam Enter, oznacza to koniec listy otrzymanych ocen
+* Wykorzystaj moduł statistics do wyliczania średniej
 
 Przeliczenia trygonometryczne
 =============================
