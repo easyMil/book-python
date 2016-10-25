@@ -190,3 +190,6 @@ Gdzie mogę szukać ciekawych informacji
 
 * http://www.infoq.com/python/
 * http://pyvideo.org/
+* https://www.jetbrains.com/pycharm/download/
+* https://www.python.org - Strona do pobrania Pythona
+* https://python3wos.appspot.com - Python 3 lista kompatybilnych bibliotek
