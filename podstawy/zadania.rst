@@ -15,11 +15,14 @@ Powielanie napisów
     Napisz trzy wersje tego programu:
 
     * wykorzystując ``range()``
-    * wykorzystując pętlę while
+    * wykorzystując pętlę ``while``
     * wykorzystując właściwości mnożenia stringów
 
 :Zadanie 3:
     Napisz doctest do takiej funkcji.
+
+:Podpowiedź:
+    * ``print('ciag znakow' * 30)``
 
 
 Parzystość
@@ -64,6 +67,13 @@ Dzienniczek ucznia
     * jeżeli wpisano cyfrę nie znjadującą się na liście, wyświetl informację i zakończ wpisywanie
     * wyświetla wyliczoną dla listy otrzymanych ocen średnią arytmetyczną.
     * jeżeli wciśnięto sam Enter, oznacza to koniec listy otrzymanych ocen.
+    * jeżeli wciśnięto sam Enter, oznacza to koniec listy otrzymanych ocen
+    * Wykorzystaj moduł statistics do wyliczania średniej
+
+:Podpowiedź:
+    * ``len()`` ``sum()``
+    * ``in``
+    * ``import statistics`` ``statistics.mean()``
 
 
 Przeliczenia trygonometryczne
@@ -104,8 +114,9 @@ Lotto
     * ``random.sample()``
 
 :Pytania:
-    * Czy da się stworzyć program czysto losowy?
     * Czym sa liczby pseudolosowe?
+    * Czy da się stworzyć program czysto losowy?
+    * Dlaczego?
 
 
 Przeliczanie temperatury
@@ -120,36 +131,6 @@ Przeliczanie temperatury
 :Podpowiedź:
     * Fahrenheit to Celsius: (°F - 32) / 1.8 = °C
     * Celsius to Fahrenheit: (°C * 1.8) + 32 = °F
-
-
-Zbalansowanie nawiasów
-======================
-
-:Nazwa skryptu: ``bin/zbalansowanie-nawiasow.py``
-:Uruchamianie: ``python bin/zbalansowanie-nawiasow.py``
-
-:Zadanie 1:
-    Napisz kod który sprawdzi zbalansowanie nawiasów, tzn. czy ilość otwieranych nawiasów jest równa ilości nawiasów zamykanych. Zwórć uwagę, że mogą być cztery typy nawiasów:
-
-    * okrągłe: ``(`` i ``)``
-    * kwadratowe: ``[`` i ``]``
-    * klamrowe ``{`` i ``}``
-    * trójkątne ``<`` i ``>``
-
-:Zadanie 2:
-    Rozbuduj poniższy zestaw testów i napisz funkcjonalność.
-
-    .. code:: python
-
-        >>> dane = "() [] () ([]()[])"
-        >>> zbalansowanie_nawiasow(a)
-        True
-        >>> dane = "( (] ([)]"
-        >>> zbalansowanie_nawiasow(a)
-        False
-
-:Zadanie 3:
-    Spróbuj użyć rekurencji.
 
 
 Pole trójkąta
@@ -173,6 +154,11 @@ Wyliczanie średniej dla parametrów
 
 :Zadanie 2:
     Dowolna liczba parametrów podanych z linii poleceń.
+
+:Podpowiedź:
+    * ``getopt``
+    * ``argparse``
+    * ``docopt``
 
 :Uruchamianie: ``python bin/srednia.py 5 10 100 32 -90 27.5``
 
@@ -286,3 +272,33 @@ Książka adresowa
     * Które podejście było najłatwiejsze?
     * W jakim formacie najlepiej przechowywać dane?
     * Które podejście jest najlepsze dla innych programistów, a które dla użytkowników?
+
+
+Zbalansowanie nawiasów
+======================
+
+:Nazwa skryptu: ``bin/zbalansowanie-nawiasow.py``
+:Uruchamianie: ``python bin/zbalansowanie-nawiasow.py``
+
+:Zadanie 1:
+    Napisz kod który sprawdzi zbalansowanie nawiasów, tzn. czy ilość otwieranych nawiasów jest równa ilości nawiasów zamykanych. Zwórć uwagę, że mogą być cztery typy nawiasów:
+
+    * okrągłe: ``(`` i ``)``
+    * kwadratowe: ``[`` i ``]``
+    * klamrowe ``{`` i ``}``
+    * trójkątne ``<`` i ``>``
+
+:Zadanie 2:
+    Rozbuduj poniższy zestaw testów i napisz funkcjonalność.
+
+    .. code:: python
+
+        >>> dane = "() [] () ([]()[])"
+        >>> zbalansowanie_nawiasow(a)
+        True
+        >>> dane = "( (] ([)]"
+        >>> zbalansowanie_nawiasow(a)
+        False
+
+:Zadanie 3:
+    Spróbuj użyć rekurencji.
