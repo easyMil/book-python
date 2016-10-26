@@ -111,7 +111,7 @@ Konwencja nazewnicza funkcji
 ----------------------------
 
 * CamelCase? Nie?! Używanie ``_`` w nazwach
-* Funkcje o nazwie zaczynającej się od ``_``
+* Funkcje o nazwie zaczynającej się od ``_`` przez konwencję są traktowane jako prywatne (w Pythonie nie ma private/protected/public).
 * Nazwy opisowe funkcji
 
 Argumenty do funkcji
