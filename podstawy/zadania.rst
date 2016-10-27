@@ -229,8 +229,11 @@ Zawartość pliku
 :Nazwa skryptu: ``bin/zawartosc-pliku.py``
 :Uruchamianie: ``python bin/zawartosc-pliku.py``
 
-:Zadanie:
+:Zadanie 1:
     Napisz program, który wyświetli na ekranie zawartość pliku o nazwie podanej przez użytkownika.
+
+:Zadanie 2:
+    Dopisz obsługę wyjątków dla braku uprawnień oraz tego że plik nie istnieje.
 
 
 Książka adresowa
@@ -246,7 +249,7 @@ Książka adresowa
     * imię
     * nazwisko
     * telefon
-    * adres (może być wiele adresów)
+    * adres
 
      * ulica
      * miasto
@@ -260,12 +263,15 @@ Książka adresowa
     Bardzo często wykorzystywanym typem pliku jest CSV, czyli wartości oddzielone przecinkami. Zamień format pliku na ten typ. Zrób tak, aby dane trafiły do odpowiednich kolumn nawet po przesortowaniu. Użyj ``csv.DictWriter()``.
 
 :Zadanie 3:
-    Zmodyfikuj program aby wykorzystywał klasy do reprezentowania wpisów w książce. Które podejście jest lepsze?
+    Zmodyfikuj aby można było wpisywać wiele adresów.
 
 :Zadanie 4:
-    Teraz wykorzystaj plik bazy danych sqlite aby trzymać informacje w tabeli. Które podejście jest lepsze?
+    Zmodyfikuj program aby wykorzystywał klasy do reprezentowania wpisów w książce. Które podejście jest lepsze?
 
 :Zadanie 5:
+    Teraz wykorzystaj plik bazy danych sqlite aby trzymać informacje w tabeli. Które podejście jest lepsze?
+
+:Zadanie 6:
     Wykorzystaj Django do stworzenia takiego modelu i wygeneruj panel administracyjny. Trudne?
 
 :Pytanie:
