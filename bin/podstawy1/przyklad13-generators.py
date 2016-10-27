@@ -1,3 +1,47 @@
+
+
+
+a = [x for x in range(0, 30)]
+b = (x for x in range(0, 30))
+c = {x for x in range(0, 30)}
+d = list(x for x in range(0, 30))
+e = tuple(x for x in range(0, 30))
+f = set(x for x in range(0, 30))
+
+print(x for x in range(0, 30))
+
+
+ADDRESS_BOOK = [
+    {'imie': 'Matt',
+    'nazwisko': 'Harasymczuk',
+    'ulica': 'Westpad',
+    'miasto': 'Katwijk aan Zee',
+    'kod_pocztowy': '2224',
+    'wojewodztwo': 'Zuid-Holland',
+    'panstwo': 'Netherlands'},
+
+    {'imie': 'Angelika',
+    'nazwisko': 'Jan',
+    'ulica': 'Bial',
+    'miasto': 'Warszawa',
+    'kod_pocztowy': '02-370',
+    'wojewodztwo': 'Mazowieckie',
+    'panstwo': 'Polska'},
+]
+
+
+osoby = [{'imie': x['imie'], 'nazwisko': x['nazwisko']} for x in ADDRESS_BOOK]
+
+
+
+#xyz = [MAP(x) for x in ZBIOR if FILTER(x)]
+
+
+
+
+print(osoby)
+
+
 # List Comprehension
 
 def parzyste_f1(x):

@@ -8,6 +8,7 @@
 
 sprawdzanie w IF:
     0 => False
+    0.0 => False
     None => False
     '' => False
     [] => False
