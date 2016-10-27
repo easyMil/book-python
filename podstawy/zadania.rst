@@ -189,7 +189,7 @@ Konwersja liczby na zapis słowny
 
 :Zakres:
     * 6 cyfr przed przecinkiem
-    * 5 cyft po przecinku
+    * 5 cyfr po przecinku
 
 :Zadanie 3:
     Napisz testy sprawdzające przypadki brzegowe.
@@ -218,9 +218,9 @@ Rzymskie
     Używając generatora zbuduj listę zawierającą wszystkie liczby podzielne przez 3 z zakresu od 1 do 33.
 
 :Zadanie 2:
-    * Używając funkcji filter usuń z niej wszystkie liczby parzyste
-    * Używając wyrażenia lambda i funkcji map podnieś wszystkie elementy tak otrzymanej listy do sześcianu
-    * Odpowiednio używając funkcji reduce i len oblicz średnią arytmetyczną z elementów tak otrzymanej listy.
+    * Używając funkcji ``filter()`` usuń z niej wszystkie liczby parzyste
+    * Używając wyrażenia ``lambda`` i funkcji ``map()`` podnieś wszystkie elementy tak otrzymanej listy do sześcianu
+    * Odpowiednio używając funkcji ``filter()`` i ``len()`` oblicz średnią arytmetyczną z elementów tak otrzymanej listy.
 
 
 Zawartość pliku

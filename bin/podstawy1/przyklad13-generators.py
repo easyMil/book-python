@@ -1,4 +1,4 @@
-# List Comprehentions
+# List Comprehension
 
 def parzyste_f1(x):
     if x % 2 == 0:
@@ -77,6 +77,5 @@ xxx(2)
 
 
 parzyste2 = (x for x in range(0, a) if x % 2 == 0)
-parzyste2(a) = (x for x in range(0, a) if x % 2 == 0)
 
 

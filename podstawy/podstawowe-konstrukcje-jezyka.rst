@@ -288,13 +288,13 @@ xml
 ---
 
 
-Generatory i list comprahention
+Generatory i list comprehension
 ===============================
 
 Generatory
 ----------
 
-List comprahention
+List comprehension
 ------------------
 
 * wykonywane natychmiast
