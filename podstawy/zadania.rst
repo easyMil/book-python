@@ -260,7 +260,7 @@ Książka adresowa
     Wszystkie dane w książce muszą być reprezentowane przez typy proste.
 
 :Zadanie 2:
-    Bardzo często wykorzystywanym typem pliku jest CSV, czyli wartości oddzielone przecinkami. Zamień format pliku na ten typ. Zrób tak, aby dane trafiły do odpowiednich kolumn nawet po przesortowaniu. Użyj ``csv.DictWriter()``.
+    Bardzo często wykorzystywanym typem pliku jest CSV, czyli wartości oddzielone przecinkami. Zamień format pliku na ten typ. Zrób tak, aby dane trafiły do odpowiednich kolumn nawet po przesortowaniu. Użyj ``csv.DictWriter()``. Wszystkie pola muszą być zawsze w cudzysłowiach i oddzielone średnikami.
 
 :Zadanie 3:
     Zmodyfikuj aby można było wpisywać wiele adresów.
