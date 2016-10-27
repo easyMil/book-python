@@ -220,7 +220,7 @@ Rzymskie
 :Zadanie 2:
     * Używając funkcji ``filter()`` usuń z niej wszystkie liczby parzyste
     * Używając wyrażenia ``lambda`` i funkcji ``map()`` podnieś wszystkie elementy tak otrzymanej listy do sześcianu
-    * Odpowiednio używając funkcji ``filter()`` i ``len()`` oblicz średnią arytmetyczną z elementów tak otrzymanej listy.
+    * Odpowiednio używając funkcji ``sum()``  i ``len()`` oblicz średnią arytmetyczną z elementów tak otrzymanej listy.
 
 
 Zawartość pliku
