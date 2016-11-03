@@ -9,3 +9,4 @@ def hello():
 t = Timer(5.0, hello)
 t.start()
 
+print('hej')

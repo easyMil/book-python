@@ -59,17 +59,28 @@ Biblioteka standardowa
 ``csv``
 =======
 
+* csv.DictReader()
+* csv.DictWriter()
+
 ``memoize``
 ===========
 
 ``json``
 ========
 
+* json.loads()
+* json.dumps()
+
 ``sqlite``
 ==========
 
 ``re``
 ======
+
+* re.search()
+* re.findall()
+* re.match()
+* re.compile()
 
 ``httplib``
 ===========
@@ -98,14 +109,28 @@ Biblioteka standardowa
 ``math``
 ========
 
+* math.sin()
+* math.cos()
+* math.tan()
+* math.pi
+
 ``statistics``
 ==============
+
+* statistics.avg()
+* statistics.mean()
+* statistics.stdev()
 
 ``random``
 ==========
 
+* random.sample()
+* random.random()
+
 ``subprocess``
 ==============
+
+* subprocess.Popen()
 
 ``doctest``
 ===========

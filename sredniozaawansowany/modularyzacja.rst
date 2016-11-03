@@ -14,6 +14,10 @@ Linia ``if __name__ == '__main__'``
 Importowanie względne ``from . import *``
 -----------------------------------------
 
+``__all__``
+-----------
+
+
 Konwencja nazewnicza - ``main.py``
 ----------------------------------
 
