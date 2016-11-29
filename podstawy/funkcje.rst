@@ -24,7 +24,7 @@ Argumenty z wartością domyślną
 Argumenty ``*args``, ``**kwargs``
 ---------------------------------
 
-Korzystnie z **self.__dict__
+* Korzystnie z ``**self.__dict__``
 
 Zwracanie wartości prostych
 ---------------------------

@@ -1,3 +1,7 @@
+**********************************
+Funkcje wbudowane i słowa kluczowe
+**********************************
+
 Słowa kluczowe
 ==============
 
@@ -27,8 +31,6 @@ Słowa kluczowe
 
 ``__name__``
 ------------
-
-
 
 
 Funkcje wbudowane

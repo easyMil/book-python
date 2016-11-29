@@ -1,16 +1,17 @@
+****************
 Print formatting
-================
+****************
 
-Stary styl
-----------
+Stary styl - ``%s``
+===================
 
 * kolejnościowe
 * nazwane
 * typy: ``string``, ``int``, ``float``
 * operatory na stringu
 
-``.format()`` - nowy styl
--------------------------
+Nowy styl - ``.format()``
+=========================
 
 * ``string``
 * ``int``
@@ -18,3 +19,7 @@ Stary styl
 * operatory na stringu
 * jako parametry do ``print("string", **args)``
 
+Więcej informacji
+=================
+
+* https://pyformat.info - Formatowanie stringów w Python

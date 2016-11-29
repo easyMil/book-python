@@ -4,4 +4,4 @@ pylint
 Sphinx
 ipython
 coverage
-lxml
+django
