@@ -65,12 +65,15 @@ Dzienniczek ucznia
     * sprawdza czy wprowadzona ocena jest na liście dopuszczalnych na wydziale ocen
     * jeżeli ocena jest na liście dopuszczalnych na wydziale ocen, dodaje ją na listę otrzymanych ocen
     * jeżeli wpisano cyfrę nie znjadującą się na liście, wyświetl informację i zakończ wpisywanie
-    * wyświetla wyliczoną dla listy otrzymanych ocen średnią arytmetyczną.
-    * jeżeli wciśnięto sam Enter, oznacza to koniec listy otrzymanych ocen.
+    * wyświetla wyliczoną dla listy otrzymanych ocen średnią arytmetyczną
     * jeżeli wciśnięto sam Enter, oznacza to koniec listy otrzymanych ocen
-    * Wykorzystaj moduł statistics do wyliczania średniej
+    * wykorzystaj moduł statistics do wyliczania średniej
+
+:Warunek:
+    * Zastosuj akademicką skalę ocen [2, 3, 3.5, 4, 4.5, 5]
 
 :Podpowiedź:
+    * dla ułatwienia wszystkie oceny mogą być typu ``float``
     * ``len()`` ``sum()``
     * ``in``
     * ``import statistics`` ``statistics.mean()``
