@@ -10,6 +10,12 @@ Jest to chyba najbardziej ciekawa rzecz w samym języku. Autorzy specyfikacji zd
 
 Sama idea spowodowała dużą polaryzację programistów. Jedni bardzo sobie chwalą to rozwiązanie, a inni przyzwyczajeni do języków przypominających składnią C są jej zaciekłymi wrogami. Osobiście jestem wielkim zwolennikiem takiego rozwiązania!
 
+.. code:: python
+
+    >>> from __future__ import braces
+      File "<stdin>", line 1
+    SyntaxError: not a chance
+
 
 Końce linii
 ===========
