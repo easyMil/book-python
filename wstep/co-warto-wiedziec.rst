@@ -190,6 +190,8 @@ Aby zainstalować jakieś nowe paczki należy użyć polecenia ``pip``. Od wers
 
 lub na Windows:
 
+.. code:: bat
+
     python -m pip install pep8
 
 Aby zobaczyć zainstalowane paczki, użyj polecenia ``pip freeze``. Przekierowując wynik tego polecenia do pliku ``requirements.txt`` stworzysz listę zależności wraz z wersjami, które są niezbędne dla uruchomienia Twojego programu.
@@ -199,6 +201,8 @@ Aby zobaczyć zainstalowane paczki, użyj polecenia ``pip freeze``. Przekierowuj
     pip freeze > requirements.txt
 
 lub na Windows:
+
+.. code:: bat
 
     python -m pip install pep8
 

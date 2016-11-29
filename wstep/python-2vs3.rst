@@ -158,3 +158,8 @@ Httplib w 2 i 3
 
 Python 3.5 i deklaracja typów
 =============================
+
+.. code:: python
+
+    def suma(a: int, b: int) -> int:
+        return a + b
