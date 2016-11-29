@@ -32,7 +32,9 @@ Parzystość
 :Uruchamianie: ``python bin/zadanie2-parzystosc.py``
 
 :Zadanie:
-    Napisz program, który wczyta od użytkownika liczbę całkowitą i wyświetli informację, czy jest to liczba parzysta, czy nieparzysta.
+    * napisz program, który wczyta od użytkownika ciąg znaków
+    * zweryfikuje czy wprowadzony ciąg jest liczbą (``int`` lub ``float``)
+    * sprawdzi czy jest to liczba parzysta, czy nieparzysta
 
 :Podpowiedź:
     * Liczba parzysta, to taka, która po podzieleniu przez dwa nie ma reszty
@@ -70,7 +72,7 @@ Dzienniczek ucznia
     * wykorzystaj moduł statistics do wyliczania średniej
 
 :Warunek:
-    * Zastosuj akademicką skalę ocen [2, 3, 3.5, 4, 4.5, 5]
+    * Zastosuj akademicką skalę ocen ``[2, 3, 3.5, 4, 4.5, 5]``
 
 :Podpowiedź:
     * dla ułatwienia wszystkie oceny mogą być typu ``float``
