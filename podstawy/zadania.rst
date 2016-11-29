@@ -63,10 +63,10 @@ Dzienniczek ucznia
     Napisz program, który wczytuje od użytkownika kolejne oceny i:
 
     * sprawdza czy wprowadzona ocena jest na liście dopuszczalnych na wydziale ocen
-    * jeżeli ocena jest na liście dopuszczalnych na wydziale ocen, dodaje ją na listę otrzymanych ocen
-    * jeżeli wpisano cyfrę nie znjadującą się na liście, wyświetl informację i zakończ wpisywanie
-    * wyświetla wyliczoną dla listy otrzymanych ocen średnią arytmetyczną
-    * jeżeli wciśnięto sam Enter, oznacza to koniec listy otrzymanych ocen
+    * jeżeli ocena jest na liście dopuszczalnych na wydziale ocen, dodaje ją do dzienniczka
+    * jeżeli wpisano cyfrę nie znjadującą się na liście dopuszczalnych ocen, wyświetl informację i zakończ wpisywanie
+    * wyświetla wyliczoną dla dzienniczka ocen średnią arytmetyczną
+    * jeżeli wciśnięto sam Enter, oznacza to koniec wpisywania do dzienniczka
     * wykorzystaj moduł statistics do wyliczania średniej
 
 :Warunek:
