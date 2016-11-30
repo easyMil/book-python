@@ -2,59 +2,62 @@
 Programowanie obiektowe
 ***********************
 
-Klasy
-=====
 
-Metody
-=======
-
-``self``
-========
-
-Ask don't tell
-==============
-
-Pola klasy
-==========
-
-Konstruktor
-===========
-
-Inicjalizacja parametrów
-========================
-
-Private, public? konwencja ``_`` i ``__``
-=========================================
+Paradygmat Obiektowy
+====================
 
 Dziedziczenie
-=============
+-------------
+
+Wielodziedziczenie
+------------------
+
+Kompozycja
+----------
 
 Dziedziczenie czy kompozycja?
-=============================
+-----------------------------
 
 Polimorfizm
-===========
+-----------
 
 Klasy abstrakcyjne
-==================
+------------------
 
-Metaclass
-=========
+
+Składnia
+========
+
+Klasy
+-----
+
+Metody
+------
+
+``self``
+--------
+
+Pola klasy
+----------
+
+Konstruktor
+-----------
 
 ``super()``
-===========
+-----------
 
-``@property``
-=============
+``@property`` i ``@x.setter``
+-----------------------------
 
 ``@staticmethod``
-=================
+-----------------
 
-Co powinno być w klasie a co nie?
-=================================
+``__str__()`` i ``__repr__()``
+------------------------------
 
-Klasa per plik?
-===============
+Metaclass
+---------
+
 
 Przeciążanie operatorów
 =======================
@@ -77,5 +80,21 @@ Przeciążanie operatorów
 ``__ge__()``
 ------------
 
-``__str__()``
-=============
+
+Dobre praktyki
+==============
+
+Ask don't tell
+--------------
+
+Inicjalizacja parametrów
+------------------------
+
+Private, public? konwencja ``_`` i ``__``
+-----------------------------------------
+
+Co powinno być w klasie a co nie?
+---------------------------------
+
+Klasa per plik?
+---------------
