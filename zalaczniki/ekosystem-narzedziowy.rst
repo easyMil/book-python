@@ -123,3 +123,13 @@ Ekosystem Narzędiowy
 
         python -m unittest FILENAME.py
 
+
+Fabric
+======
+
+:Install:
+    .. code:: bash
+
+        pip install fabric
+        pip install --upgrade fabric
+        pip uninstall fabric
