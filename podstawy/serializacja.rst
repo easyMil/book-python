@@ -28,7 +28,7 @@ Problem z rzutowaniem daty na JSON:
     >>> import csv
 
     >>> with open('filename.csv') as csvfile:
-    ...     data = csv.DictReader(csvfile)
+    ...     data = csv.DictReader(csvfile, delimiter=',', quotechar='"')
     ...
     ...     for row in data:
     ...         print(row['first_name'], row['last_name'])
@@ -46,7 +46,7 @@ Problem z rzutowaniem daty na JSON:
 
     >>> with open('filename.csv', 'w') as csvfile:
     ...    fieldnames = data[0].keys()
-    ...    writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
+    ...    writer = csv.DictWriter(csvfile, fieldnames=fieldnames, delimiter=',', quotechar='"')
     ...    writer.writeheader()
     ...
     ...    for row in data:
