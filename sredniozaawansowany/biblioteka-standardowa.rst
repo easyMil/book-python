@@ -38,11 +38,6 @@ Biblioteka standardowa
     >>> sys.path.append
     >>> sys.platform
 
-``abc``
-=======
-
-``@abc.abstractmethod``
------------------------
 
 ``logging``
 ===========
@@ -69,6 +64,16 @@ Biblioteka standardowa
 
 ``pprint``
 ==========
+
+.. code:: python
+
+    >>> from pprint import pprint
+    >>> data = [
+    ...    {'first_name': 'Baked', 'last_name': 'Beans'},
+    ...    {'first_name': 'Lovely', 'last_name': 'Spam'},
+    ...    {'first_name': 'Wonderful', 'last_name': 'Spam'}
+    ...]
+    >>> pprint(data)
 
 ``csv``
 =======
