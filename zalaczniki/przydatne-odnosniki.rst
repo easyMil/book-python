@@ -1,23 +1,34 @@
-Gdzie mogę szukać ciekawych informacji
-======================================
+*******************
+Przydatne odnośniki
+*******************
 
-* http://www.infoq.com/python/
-* http://pyvideo.org/
-* https://www.jetbrains.com/pycharm/download/
+
+Doumentacja
+===========
 * https://www.python.org - Strona do pobrania Pythona
-* https://python3wos.appspot.com - Python 3 lista kompatybilnych bibliotek
 * https://pyformat.info - Formatowanie stringów w Python
 * http://devdocs.io
 
+
+Video
+=====
+* http://www.infoq.com/python/
+* http://pyvideo.org/
+* https://www.youtube.com/watch?v=-5wpm-gesOY
+
+
+Środowisko developerskie
+========================
+* https://www.jetbrains.com/pycharm/download/
+
+
 Ponadto
 =======
-
-* https://www.youtube.com/watch?v=-5wpm-gesOY
+* https://python3wos.appspot.com - Python 3 lista kompatybilnych bibliotek
 * http://www.unixtimestamp.com
 * https://coloredlogs.readthedocs.io/en/latest/
 
 Humor IT
 ========
-
 * http://geekandpoke.typepad.com
 * http://devopsreactions.tumblr.com
