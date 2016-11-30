@@ -59,9 +59,6 @@ Google App Engine
 Bazy danych
 ===========
 
-``sqlite``
-----------
-
 ``pyMySQL``
 -----------
 
