@@ -30,27 +30,33 @@ language = 'pl'
 exclude_patterns = ['_build', '_themes']
 pygments_style = 'xcode'
 todo_include_todos = True
+today = True
+today_fmt = '%Y-%m-%d'
+
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = ['_themes']
 html_static_path = []
 html_sidebars = {'sidebar': ['localtoc.html', 'sourcelink.html', 'searchbox.html']}
 html_show_sphinx = False
 htmlhelp_basename = 'PythonWorkshop'
-latex_elements = {
-}
+
+latex_elements = {}
 latex_documents = [
   (master_doc, 'Python-Workshop.tex', 'Python Workshop Documentation',
    'Matt Harasymczuk', 'manual'),
 ]
+
 man_pages = [
     (master_doc, 'python-workshop', 'Python Workshop Documentation',
      [author], 1)
 ]
+
 texinfo_documents = [
   (master_doc, 'Python Workshop', 'Python Workshop Documentation',
    author, 'Python Workshop', '',
    'Miscellaneous'),
 ]
+
 epub_title = project
 epub_author = author
 epub_publisher = author
