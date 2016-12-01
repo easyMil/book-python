@@ -34,8 +34,7 @@ language = 'pl'
 exclude_patterns = ['_build', '_themes']
 pygments_style = 'vs'
 todo_include_todos = True
-today = False
-#today_fmt = '%Y-%m-%d'
+today_fmt = '%Y-%m-%d'
 
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = ['_themes']
