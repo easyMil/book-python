@@ -30,7 +30,6 @@ language = 'pl'
 exclude_patterns = ['_build', '_themes']
 pygments_style = 'vs'
 todo_include_todos = True
-today = True
 today_fmt = '%Y-%m-%d'
 
 html_theme = 'sphinx_rtd_theme'
@@ -42,19 +41,15 @@ htmlhelp_basename = 'PythonWorkshop'
 
 latex_elements = {}
 latex_documents = [
-  (master_doc, 'Python-Workshop.tex', 'Python Workshop',
-   'Matt Harasymczuk', 'manual'),
+  (master_doc, 'Python-Workshop.tex', 'Python Workshop', 'Matt Harasymczuk', 'manual'),
 ]
 
 man_pages = [
-    (master_doc, 'python-workshop', 'Python Workshop',
-     [author], 1)
+    (master_doc, 'python-workshop', 'Python Workshop', [author], 1)
 ]
 
 texinfo_documents = [
-  (master_doc, 'Python-Workshop', 'Python Workshop',
-   author, 'Python Workshop', '',
-   'Miscellaneous'),
+  (master_doc, 'Python-Workshop', 'Python Workshop', author, 'Python Workshop', '', 'Miscellaneous'),
 ]
 
 epub_title = project
