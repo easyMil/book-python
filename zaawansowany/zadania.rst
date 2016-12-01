@@ -10,6 +10,14 @@ Używając biblioteki standardowej w Pythonie zaciągnij informacje o repozytori
 * wygeneruj w swoim profilu token https://github.com/settings/tokens
 
 * Następnie z przeglądnij listę z poziomu Pythona i znajdź URL dla repozytorium ``django``.
+
+.. code:: python
+
+    "name": "django",
+    "full_name": "django/django",
+
+    # wyszukaj "commits_url": ???
+
 * Przeglądnij to repozytorium i jego listę commitów.
 * Podaj datę i opis ostatniego commita
 * Znajdź numery ID ticketów (``Fixed #...``) z issue trackera, które zostały rozwiązane w ostatnim miesiącu
@@ -22,6 +30,7 @@ Używając biblioteki standardowej w Pythonie zaciągnij informacje o repozytori
     GET /orgs/django/repos
     GET /repos/dajngo/django/commits
 
+
 .. code:: shell
 
     curl https://api.github.com/orgs/django/repos
@@ -29,11 +38,16 @@ Używając biblioteki standardowej w Pythonie zaciągnij informacje o repozytori
 
 .. code:: python
 
-    auth = b'username:token'
-    headers={
-        'Authorization': 'Basic {}'.format(base64.b64encode(auth).decode('ascii')),
-        'User-Agent': 'Python HTTP',
-    }
+    >>> auth = b'username:token'
+    >>> headers={
+    ...     'Authorization': 'Basic {}'.format(base64.b64encode(auth).decode('ascii')),
+    ...     'User-Agent': 'Python HTTP',
+    ...}
+
+    # ...
+
+    >>> body = resp.read().decode()
+    >>> data = json.loads(body)
 
 
 Generatory vs. Przetwarzanie Listy
