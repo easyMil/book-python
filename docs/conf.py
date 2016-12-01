@@ -42,17 +42,17 @@ htmlhelp_basename = 'PythonWorkshop'
 
 latex_elements = {}
 latex_documents = [
-  (master_doc, 'Python-Workshop.tex', 'Python Workshop Documentation',
+  (master_doc, 'Python-Workshop.tex', 'Python Workshop',
    'Matt Harasymczuk', 'manual'),
 ]
 
 man_pages = [
-    (master_doc, 'python-workshop', 'Python Workshop Documentation',
+    (master_doc, 'python-workshop', 'Python Workshop',
      [author], 1)
 ]
 
 texinfo_documents = [
-  (master_doc, 'Python Workshop', 'Python Workshop Documentation',
+  (master_doc, 'Python-Workshop', 'Python Workshop',
    author, 'Python Workshop', '',
    'Miscellaneous'),
 ]
