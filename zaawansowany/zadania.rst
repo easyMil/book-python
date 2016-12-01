@@ -7,12 +7,56 @@ REST API
 
 Używając biblioteki standardowej w Pythonie zaciągnij informacje o repozytoriach użytkownika Django na https://github.com
 
-* https://github.com/django/django/commits/master
+* wygeneruj w swoim profilu token https://github.com/settings/tokens
+
 * Następnie z przeglądnij listę z poziomu Pythona i znajdź URL dla repozytorium ``django``.
 * Przeglądnij to repozytorium i jego listę commitów.
 * Podaj datę i opis ostatniego commita
 * Znajdź numery ID ticketów (``Fixed #...``) z issue trackera, które zostały rozwiązane w ostatnim miesiącu
 * Spróbuj skorzystać zamiast biblioteki standardowej z pakietu ``requests``
+
+.. code:: REST
+
+    https://api.github.com/
+
+    GET /orgs/django/repos
+    GET /repos/dajngo/django/commits
+
+.. code:: shell
+
+    curl https://api.github.com/orgs/django/repos
+
+
+.. code:: python
+
+    import http
+    import base64
+
+    # This sets up the https connection
+    c = http.client.HTTPSConnection('api.github.com/')
+
+    # we need to base 64 encode it
+    # and then decode it to acsii as python 3 stores it as a byte string
+    userAndPass = base64.b64encode(b'username:password').decode('ascii')
+    headers = { 'Authorization' : 'Basic %s' %  userAndPass }
+
+    # then connect
+    url = '/repos/dajngo/django/commits'
+    c.request('GET', url, headers=headers)
+
+    # get the response back
+    res = c.getresponse()
+
+    # at this point you could check the status etc
+    # this gets the page text
+    data = res.read()
+
+.. code:: python
+
+    import requests
+
+    r = requests.get('https://api.github.com/repos/dajngo/django/commits', auth=('myusername', 'mybasicpass'))
+    print(r.text)
 
 Generatory vs. Przetwarzanie Listy
 ==================================
