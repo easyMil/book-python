@@ -24,7 +24,7 @@ author = 'Matt Harasymczuk'
 version = subprocess.Popen('git log -1 --format="%h"', stdout=subprocess.PIPE, shell=True).stdout.read().decode().replace('\n', '')
 language = 'pl'
 exclude_patterns = ['_build', '_themes']
-pygments_style = 'borland'
+pygments_style = 'xcode'
 todo_include_todos = True
 html_theme = 'sphinx_rtd_theme'
 html_theme_path = ['_themes']
