@@ -4,6 +4,9 @@ import shlex
 import subprocess
 
 
+def version():
+    return subprocess.Popen('git log -1 --format="%h"', stdout=subprocess.PIPE, shell=True).stdout.read().decode().replace('\n', '')
+
 extensions = [
     #'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
@@ -21,7 +24,8 @@ master_doc = 'index'
 project = 'Python Workshop'
 copyright = '2015-2017, Matt Harasymczuk'
 author = 'Matt Harasymczuk'
-version = subprocess.Popen('git log -1 --format="%h"', stdout=subprocess.PIPE, shell=True).stdout.read().decode().replace('\n', '')
+version = version()
+release = version()
 language = 'pl'
 exclude_patterns = ['_build', '_themes']
 pygments_style = 'xcode'
