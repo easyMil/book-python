@@ -56,7 +56,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = 'The Book of Python'
-copyright = '2015-2016, Matt Harasymczuk'
+copyright = '2015-2017, Matt Harasymczuk'
 author = 'Matt Harasymczuk'
 
 # The version info for the project you're documenting, acts as replacement for
@@ -101,6 +101,8 @@ exclude_patterns = ['_build']
 #show_authors = False
 
 # The name of the Pygments (syntax highlighting) style to use.
+# ['colorful', 'vs', 'tango', 'pastie', 'igor', 'default', 'borland', 'lovelace', 'algol_nu', 'algol', 'paraiso-dark', 'autumn', 'paraiso-light', 'bw', 'native', 'monokai', 'fruity', 'trac', 'rrt', 'perldoc', 'manni', 'friendly', 'emacs', 'vim', 'murphy', 'xcode']
+# https://help.farbox.com/pygments.html
 pygments_style = 'sphinx'
 
 # A list of ignored prefixes for module index sorting.
@@ -117,6 +119,7 @@ todo_include_todos = True
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
+# http://www.sphinx-doc.org/en/latest/theming.html
 html_theme = 'sphinx_rtd_theme'
 
 # Theme options are theme-specific and customize the look and feel of a theme

@@ -31,6 +31,14 @@ Ekosystem Narzędiowy
         pep8 --statistics -qq DIRECTORY/
         pep8 --show-source --show-pep8 FILENAME.py
 
+:Config:
+    ``setup.cfg``
+
+    .. code:: ini
+
+        [pep8]
+        max-line-length = 939
+        ignore = E402,W391
 
 ``SonarQube``
 =============

@@ -40,13 +40,39 @@ decorator
             return f(*args, **kwargs)
         return wrapper
 
+    # usage
+
     @my_decorator
     def func(x):
         return x
 
 .. code:: python
 
-    func = my_decorator(f)
+    import os
+    import logging
+
+
+    def if_file_exists(function):
+
+        def check(filename):
+            if os.path.exists(filename):
+                function(filename)
+            else:
+                logging.error('File "%(filename)s" does not exists, will not execute!', locals())
+
+        return check
+
+
+    @if_file_exists
+    def print_file(filename):
+        with open(filename) as file:
+            content = file.read()
+            print(content)
+
+
+    if __name__ == '__main__':
+        print_file('/etc/passwd')
+        print_file('/tmp/passwd')
 
 
 złożenia funkcji
@@ -58,19 +84,56 @@ złożenia funkcji
 .. code:: python
 
     x = 1
-    l = [1, 2, 3]
+    lista = [1, 2, 3]
 
-    def f(y):
+    def dodaj_x(y):
         return x + y
 
-    map(f, l)
+    map(dodaj_x, lista)
     map(lambda y: x + y, l)
 
 
 ``zip()``
 ---------
 
+.. code:: python
+
+    >>> x = [1, 2, 3]
+    >>> y = [4, 5, 6]
+    >>> zipped = zip(x, y)
+    >>> list(zipped)
+    [(1, 4), (2, 5), (3, 6)]
+
+.. code:: python
+
+    >>> # unzip
+    >>> x2, y2 = zip(*zip(x, y))
+    >>> x == list(x2) and y == list(y2)
+    True
+
 ``filter()``
 ------------
 
+.. code:: python
 
+    OSOBY = [
+        {'imie': 'Matt', 'wiek': 10},
+        {'imie': 'Angelika', 'wiek': 18},
+        {'imie': 'Mateusz', 'wiek': 21},
+        {'imie': 'Tadeusz', 'wiek': 35},
+    ]
+
+    def osoba_pelnoletnia(osoba):
+        if osoba['wiek'] >= 18:
+            return True
+        else:
+            return False
+
+
+    dorosli = filter(osoba_pelnoletnia, OSOBY)
+    print(list(dorosli))
+
+
+
+``all()``
+---------

@@ -27,7 +27,7 @@ class Samochod(Pojazd, UmieTrabic, OtwieralneSzyby):
 class Cabrio(Samochod, OtwieralnyDach):
     def wlacz_swiatla(self, *args, **kwargs):
         print('Podnieś obudowę lamp')
-        print('Przypałowa muzyzka')
+        print('Puść muzyzkę')
         super(Cabrio, self).wlacz_swiatla(*args, **kwargs)
         print('Zatrąb')
 

@@ -1,11 +1,17 @@
+*******
 Funkcje
-=======
+*******
 
 Definiowanie funkcji
---------------------
+====================
+
+.. code:: python
+
+    def hello():
+        print('hello world')
 
 Konwencja nazewnicza funkcji
-----------------------------
+============================
 
 * CamelCase? Nie?! Używanie ``_`` w nazwach
 * Funkcje o nazwie zaczynającej się od ``_`` przez konwencję są traktowane jako prywatne (w Pythonie nie ma private/protected/public).
@@ -13,30 +19,155 @@ Konwencja nazewnicza funkcji
 * Nazwy opisowe funkcji
 
 Argumenty do funkcji
---------------------
+====================
+
+.. code:: python
+
+    >>> def dodaj(a, b):
+    ...    return a + b
+
+    >>> dodaj(1, 2)
+    3
+
 
 Argumenty nazwane
 -----------------
 
+.. code:: python
+
+    >>> def dodaj(a, b):
+    ...    return a + b
+
+    >>> dodaj(a=1, b=2)
+    3
+
 Argumenty z wartością domyślną
 ------------------------------
 
-Argumenty ``*args``, ``**kwargs``
----------------------------------
+.. code:: python
 
-* Korzystnie z ``**self.__dict__``
+    >>> def hello(tekst='hello world'):
+    ...     print(tekst)
+
+    >>> hello(tekst='ehlo')
+    ehlo
+
+    >>> hello()
+    hello world
+
+Zwracanie wartości
+==================
 
 Zwracanie wartości prostych
 ---------------------------
 
+.. code:: python
+
+    def foo1():
+        return True
+
+    def foo2():
+        return None
+
+    def foo3():
+        return 'bar'
+
+    def foo4():
+        return [10, 20]
+
+    def foo5():
+        return foo1
+
+    def foo6():
+        pass
+
+    def foo7():
+        return 10, 20, 30, 5, 'a'
+
+    def foo8():
+        return {'imie': 'Matt', 'nazwisko': 'Harasymczuk'}
+
+
 Zwracanie typów złożonych
 -------------------------
+
+.. code:: python
+
+    def foo9():
+        return [
+            {'imie': 'Matt', 'nazwisko': 'Harasymczuk'},
+            {'imie': 'Matt', 'nazwisko': 'Harasymczuk'},
+            {'imie': 'Matt', 'nazwisko': 'Harasymczuk'}]
 
 Rozpakowywanie wartości zwracanych
 ----------------------------------
 
 .. code:: python
 
-    value, _ = function()
-    value, *args = function()
+    >>> napiece, natezenie, *args = foo7()
+    >>> napiecie, *_ = foo7()
 
+.. code:: python
+
+    >>> value, _ = function()
+    >>> value, *args = function()
+
+
+Operator ``*`` i ``**``
+=======================
+
+
+Argumenty ``*args``, ``**kwargs``
+---------------------------------
+
+.. code:: python
+
+    def foo(a, b, *args, **kwargs):
+        print(locals())
+
+Przy wywołaniu funkcji
+----------------------
+
+.. code:: python
+
+    foo(1, 2, **{'napiecie':10, 'natezenie': 20, 'moc': 3})
+
+    foo(
+        1,
+        2,
+        napiecie=10,
+        natezenie=20,
+        moc=3)
+
+
+    def bar():
+        return range(0, 5)
+
+    jeden, dwa, *reszta = bar()
+
+    print(jeden, dwa, reszta)
+
+
+    def foobar(a, b, *args):
+        print(locals())
+
+    foobar(1, 2, 5, 7)
+
+
+    def foobar(a, b, **kwargs):
+        print(locals())
+
+    foobar(1, 2, 5, 7)
+
+
+Przykładowe zastosowanie
+------------------------
+
+.. code:: python
+
+    class Osoba:
+        first_name = 'Matt'
+        last_name = 'Harasymczuk'
+
+        def __str__(self):
+            return '{first_name} {last_name}'.format(**self.__dict__)

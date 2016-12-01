@@ -6,20 +6,10 @@ Author
 ======
 
 :name: `Matt Harasymczuk <http://astrotech.io>`_
-:email: `workshop-python@astrotech.io <mailto:workshop-python@astrotech.io>`_
-:www: `AstroTech.io <http://astrotech.io>`_
-:facebook: `Matt Harasymczuk <https://facebook.com/matt.harasymczuk>`_
-:linkedin: `Matt Harasymczuk <https://linkedin.com/in/mattharasymczuk>`_
-
-To Do
-=====
-
-* tematy związane z obsługą formatu JSON,
-* tematy związane nie tylko z rozszerzonymi, ale również podstawowymi wzorcami projektowymi,
-* tematy związane z testowaniem automatycznym w pythonie
-* tematy związane z tematem wątków/procesów/eventów
-* tematy związane z programowaniem sieciowym plus obsługa w Pythonie protokołów tcp/ip
-* Dodatkowo chcielibyśmy w ramach przykładów/omówień kodu pochylić się na tematem pisania kodu bazowego  pod kątem kompatybilności z wieloma OSami czy efektywnego refaktoringu istniejacego kodu pod kątem obsługi rozszerzenia wspieranych konfiguracji (np dodanie Ipv6 do Ipv4).
+:email: `python@astrotech.io <mailto:python@astrotech.io>`_
+:www: `http://www.astrotech.io <http://astrotech.io>`_
+:facebook: `https://facebook.com/matt.harasymczuk <https://facebook.com/matt.harasymczuk>`_
+:linkedin: `https://linkedin.com/in/mattharasymczuk <https://linkedin.com/in/mattharasymczuk>`_
 
 
 Spis Treści
@@ -74,6 +64,7 @@ Spis Treści
    sredniozaawansowany/tworzenie-dokumentacji.rst
    sredniozaawansowany/django.rst
    sredniozaawansowany/programowanie-gui.rst
+   sredniozaawansowany/introspection.rst
 
 
 .. toctree::
@@ -83,12 +74,14 @@ Spis Treści
    :name: zaawansowany
 
    zaawansowany/generatory.rst
+   zaawansowany/iteratory.rst
    zaawansowany/system-operacyjny.rst
    zaawansowany/watki-i-procesy.rst
    zaawansowany/programowanie-funkcyjne.rst
    zaawansowany/programowanie-sieciowe.rst
    zaawansowany/collections.rst
    zaawansowany/wzorce-projektowe.rst
+   zaawansowany/c-extensions.rst
    zaawansowany/zadania.rst
 
 

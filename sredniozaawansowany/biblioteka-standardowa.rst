@@ -256,3 +256,11 @@ Define how a single command-line argument should be parsed. Each parameter has i
     parser.add_argument('--output', default='output.c', type=argparse.FileType('w'))
 
     script = parser.parse_args()
+
+
+.. code:: python
+
+    try:
+       script = parser.parse_args()
+    except SystemExit:
+        pass
