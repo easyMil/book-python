@@ -11,7 +11,7 @@ Wątki
 Tworzenie wątków
 ----------------
 
-.. code:: python
+.. code-block:: python
 
     from threading import Timer
 
@@ -27,7 +27,7 @@ Tworzenie wątków
 Synchronizacja wątków
 ---------------------
 
-.. code:: python
+.. code-block:: python
 
     import queue
     import threading
@@ -117,7 +117,7 @@ IPC - komunikacja międzyprocesowa
 ---------------------------------
 
 :figury.py:
-    .. code:: python
+    .. code-block:: python
 
         class Prostokat:
 
@@ -135,7 +135,7 @@ IPC - komunikacja międzyprocesowa
                 return 'Prostokat(a=%s, b=%s)' % (self.a, self.b)
 
 :processes-client.py:
-    .. code:: python
+    .. code-block:: python
 
         from multiprocessing.connection import Client
         import logging
@@ -158,7 +158,7 @@ IPC - komunikacja międzyprocesowa
         conn.close()
 
 :processes-listener.py:
-    .. code:: python
+    .. code-block:: python
 
         from multiprocessing.connection import Listener
         import logging

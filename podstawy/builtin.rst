@@ -32,12 +32,12 @@ Słowa kluczowe
 ``__name__``
 ------------
 
-.. code:: python
+.. code-block:: python
 
     if __name__ == '__main__':
         print('hello world')
 
-.. code:: python
+.. code-block:: python
 
     import logging
 

@@ -2,7 +2,7 @@
 Introspekcja
 ************
 
-.. code:: python
+.. code-block:: python
 
     #!/usr/bin/env python3
 

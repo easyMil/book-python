@@ -28,7 +28,7 @@ Standard WSGI
 ``requests``
 ------------
 
-.. code:: python
+.. code-block:: python
 
     >>> import requests
 
@@ -37,7 +37,7 @@ Standard WSGI
     >>> requests.head('http://httpbin.org/get')
     >>> requests.options('http://httpbin.org/get')
 
-.. code:: python
+.. code-block:: python
 
     >>> payload = {'key1': 'value1', 'key2': 'value2'}
     >>> r = requests.get('http://httpbin.org/get', params=payload)
@@ -49,7 +49,7 @@ Standard WSGI
     >>> print(r.url)
     http://httpbin.org/get?key1=value1&key2=value2&key2=value3
 
-.. code:: python
+.. code-block:: python
 
     >>> import requests
 
@@ -65,14 +65,14 @@ Standard WSGI
     >>> r.json()
     {u'private_gists': 419, u'total_private_repos': 77, ...}
 
-.. code:: python
+.. code-block:: python
 
     >>> url = 'https://api.github.com/some/endpoint'
     >>> headers = {'user-agent': 'my-app/0.0.1'}
 
     >>> r = requests.get(url, headers=headers)
 
-.. code:: python
+.. code-block:: python
 
     >>> payload = {'key1': 'value1', 'key2': 'value2'}
 
@@ -87,7 +87,7 @@ Standard WSGI
       ...
     }
 
-.. code:: python
+.. code-block:: python
 
     >>> r = requests.head('http://github.com', allow_redirects=True)
 
@@ -97,7 +97,7 @@ Standard WSGI
     >>> r.history
     [<Response [301]>]
 
-.. code:: python
+.. code-block:: python
 
     >>> import json
 
@@ -106,7 +106,7 @@ Standard WSGI
 
     >>> r = requests.post(url, data=json.dumps(payload))
 
-.. code:: python
+.. code-block:: python
 
     >>> url = 'https://api.github.com/some/endpoint'
     >>> payload = {'some': 'data'}
@@ -178,7 +178,7 @@ Inne
 ``ldap3``
 ---------
 
-.. code:: python
+.. code-block:: python
 
     import datetime
     import time
@@ -191,7 +191,7 @@ Inne
     BASEDN = "OU=Users,DC=local"
     SERVER = Server("127.0.0.1", port=389)
     ATTRIBUTES = ['mail', 'pwdLastSet']
-    
+
 
     def construct_filter(wintimestamp):
         return """(&

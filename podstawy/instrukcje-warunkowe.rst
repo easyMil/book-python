@@ -4,7 +4,7 @@ Instrukcje warunkowe
 ``if`` ... ``elif`` ... ``else``
 --------------------------------
 
-.. code:: python
+.. code-block:: python
 
     if not 0 <= k <= n:
         raise ValueError("Sample larger than population")

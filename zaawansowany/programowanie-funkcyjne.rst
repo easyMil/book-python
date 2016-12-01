@@ -4,7 +4,7 @@ Programowanie funkcyjne
 lambda
 ------
 
-.. code:: python
+.. code-block:: python
 
     foo = lambda x: x*x
     print(foo(10))
@@ -15,7 +15,7 @@ lambda
 closure
 -------
 
-.. code:: python
+.. code-block:: python
 
     def f(x):
         def g(y):
@@ -33,7 +33,7 @@ decorator
 * Modify global state
 * Metadata
 
-.. code:: python
+.. code-block:: python
 
     def my_decorator(f):
         def wrapper(*args, **kwargs):
@@ -46,7 +46,7 @@ decorator
     def func(x):
         return x
 
-.. code:: python
+.. code-block:: python
 
     import os
     import logging
@@ -81,7 +81,7 @@ złożenia funkcji
 ``map()``
 ---------
 
-.. code:: python
+.. code-block:: python
 
     x = 1
     lista = [1, 2, 3]
@@ -96,7 +96,7 @@ złożenia funkcji
 ``zip()``
 ---------
 
-.. code:: python
+.. code-block:: python
 
     >>> x = [1, 2, 3]
     >>> y = [4, 5, 6]
@@ -104,7 +104,7 @@ złożenia funkcji
     >>> list(zipped)
     [(1, 4), (2, 5), (3, 6)]
 
-.. code:: python
+.. code-block:: python
 
     >>> # unzip
     >>> x2, y2 = zip(*zip(x, y))
@@ -114,7 +114,7 @@ złożenia funkcji
 ``filter()``
 ------------
 
-.. code:: python
+.. code-block:: python
 
     OSOBY = [
         {'imie': 'Matt', 'wiek': 10},

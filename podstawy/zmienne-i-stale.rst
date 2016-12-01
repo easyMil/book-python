@@ -8,7 +8,7 @@ Stałe i zmienne
 Deklarowanie zmiennych
 ----------------------
 
-.. code:: python
+.. code-block:: python
 
     moja_zmienna = 10
     moja_zmienna = 'przykladowy tekst'
@@ -45,7 +45,7 @@ Jednym z najbardziej podstawowych typów danych jest ``int``.
 
 Podobnie jak pozostałe typy ``float()`` jest funkcją, która konwertuje swój argument na liczbę zmiennoprzecinkową.
 
-.. code:: python
+.. code-block:: python
 
     >>> float('+1.23')
     1.23
@@ -64,7 +64,7 @@ Podobnie jak pozostałe typy ``float()`` jest funkcją, która konwertuje swój 
 
 ``complex`` reprezentuje typ liczby zespolonej posiadającej część rzeczywistą oraz urojoną. Należy zwrócić uwagę, że argument powinien być ciągiem znaków niezawierającym spacji. W przeciwnym przypadku otrzymamy ``ValueError``.
 
-.. code:: python
+.. code-block:: python
 
     >>> complex('1+2j')
     (1+2j)

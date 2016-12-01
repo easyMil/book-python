@@ -18,7 +18,7 @@ Kompozycja
 Dziedziczenie czy kompozycja?
 -----------------------------
 
-.. code:: python
+.. code-block:: python
 
     class OtwieralneSzyby:
         def otworz_szyby(self):
@@ -66,7 +66,7 @@ Dziedziczenie czy kompozycja?
 Polimorfizm
 -----------
 
-.. code:: python
+.. code-block:: python
 
     >>> class Pojazd:
     >>>    def zatrab(self):
@@ -118,7 +118,7 @@ Konstruktor
 ``@property`` i ``@x.setter``
 -----------------------------
 
-.. code:: python
+.. code-block:: python
 
     class Cls:
         def __init__(self):

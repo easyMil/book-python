@@ -5,7 +5,7 @@ Testy
 Doctest
 =======
 
-.. code:: python
+.. code-block:: python
 
     def km_na_metry(ile):
         """
@@ -31,7 +31,7 @@ Doctest
         doctest.testmod()
 
 
-.. code:: python
+.. code-block:: python
 
 
     MINIMALNA_TEMPERATURA = -273.15
@@ -73,7 +73,7 @@ Doctest
 Unit Test
 =========
 
-.. code:: python3
+.. code-block:: python3
 
     import unittest
 

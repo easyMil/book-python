@@ -14,7 +14,8 @@ Iterowanie po obiektach
 Iterowanie po stringu
 ---------------------
 
-.. code:: python
+.. code-block:: python
+
     for znak in 'python':
         print(znak)
 
@@ -22,17 +23,17 @@ Iterowanie po stringu
 Iterowanie po ``list()``, ``dict()``, ``set()``, ``tuple()``
 ------------------------------------------------------------
 
-.. code:: python
+.. code-block:: python
 
     for liczba in [1, 2, 3, 4]:
         print(liczba)
 
-.. code:: python
+.. code-block:: python
 
     for key, value in [(0, 0), (1, 1), (1, 2)]:
         print('%s -> %s' % (key, value))
 
-.. code:: python
+.. code-block:: python
 
     slownik = {'x': 1, 'y': 2}
 
@@ -45,7 +46,7 @@ Iterowanie po ``list()``, ``dict()``, ``set()``, ``tuple()``
 Własny iterator
 ===============
 
-.. code:: python
+.. code-block:: python
 
     class ListaFigurGeometrycznych:
         lista = []

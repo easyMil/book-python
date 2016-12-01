@@ -10,17 +10,17 @@ Konstrukcja ``with``
 Czytanie
 ========
 
-.. code:: python
+.. code-block:: python
 
     with open(FILENAME) as file:
         content = file.read()
 
-.. code:: python
+.. code-block:: python
 
     with open(FILENAME) as file:
         content = file.readlines()
 
-.. code:: python
+.. code-block:: python
 
     with open(FILENAME) as file:
         for line in file:
@@ -29,12 +29,12 @@ Czytanie
 Zapis
 =====
 
-.. code:: python
+.. code-block:: python
 
     with open(FILENAME, 'w') as file:
         file.write('foobar')
 
-.. code:: python
+.. code-block:: python
 
     with open(FILENAME, 'a') as file:
         file.write('foobar')
@@ -59,7 +59,7 @@ Tryby odczytu i zapisu
 Obsługa wyjątków
 ================
 
-.. code:: python
+.. code-block:: python
 
     FILENAME = input('Podaj nazwę pliku: ')
 

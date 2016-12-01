@@ -40,7 +40,7 @@ Rozwiązanie REPL idealnie pasuje do szybkiego testowania składni oraz funkcjon
 
 Uproszczoną implementację takiego rozwiązania można przedstawić w następujący sposób:
 
-.. code:: python
+.. code-block:: python
 
     while True:
         command = raw_input('>>> ')

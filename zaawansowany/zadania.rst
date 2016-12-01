@@ -11,7 +11,7 @@ Używając biblioteki standardowej w Pythonie zaciągnij informacje o repozytori
 
 * Następnie z przeglądnij listę z poziomu Pythona i znajdź URL dla repozytorium ``django``.
 
-.. code:: python
+.. code-block:: python
 
     "name": "django",
     "full_name": "django/django",
@@ -36,7 +36,7 @@ Używając biblioteki standardowej w Pythonie zaciągnij informacje o repozytori
     curl https://api.github.com/orgs/django/repos
 
 
-.. code:: python
+.. code-block:: python
 
     >>> auth = b'username:token'
     >>> headers={

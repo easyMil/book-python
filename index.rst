@@ -95,3 +95,11 @@ Spis Treści
    zalaczniki/python-2vs3.rst
    zalaczniki/wybor-ide.rst
    zalaczniki/ekosystem-narzedziowy.rst
+
+.. toctree::
+   :maxdepth: 3
+   :numbered:
+   :caption: Receptury
+   :name: receptury
+
+   receptury/ldap-expiring-passwords.rst

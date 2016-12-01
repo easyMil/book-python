@@ -4,7 +4,7 @@ Serializacja
 ``pickle``
 ----------
 
-.. code:: python
+.. code-block:: python
 
     >>> import pickle
 
@@ -21,7 +21,7 @@ Serializacja
 ``json``
 --------
 
-.. code:: python
+.. code-block:: python
 
     >>> import json
 
@@ -29,7 +29,7 @@ Serializacja
 
 Problem z rzutowaniem daty na JSON:
 
-.. code:: python
+.. code-block:: python
 
     >>> json.JSONEncoder.default = lambda self,obj: ('{:%Y-%m-%dT%H:%M:%S.%fZ}'.format(obj) if isinstance(obj, datetime.datetime) else None)
 
@@ -39,7 +39,7 @@ Problem z rzutowaniem daty na JSON:
 ``csv``
 -------
 
-.. code:: python
+.. code-block:: python
 
     >>> import csv
 
@@ -50,7 +50,7 @@ Problem z rzutowaniem daty na JSON:
     ...         print(row['first_name'], row['last_name'])
 
 
-.. code:: python
+.. code-block:: python
 
     >>> import csv
 
@@ -82,7 +82,7 @@ xml
         <command timeout="2">/bin/echo 'juz wstalem'</command>
     </execute>
 
-.. code:: python
+.. code-block:: python
 
     import logging
     import xml.etree.ElementTree
@@ -132,7 +132,7 @@ xml
 xslt
 ----
 
-.. code:: python
+.. code-block:: python
 
     import io
     from lxml import etree

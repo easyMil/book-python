@@ -185,7 +185,7 @@ Konwersja liczby na zapis słowny
 :Zadanie 2:
     Napisz program, który przekonwertuje liczbę na zapis słowny, np.:
 
-    .. code:: python
+    .. code-block:: python
 
         >>> int_to_str(999)
         'dziewiećset dziewięćdziesiąt dziewięć'
@@ -302,7 +302,7 @@ Zbalansowanie nawiasów
 :Zadanie 2:
     Rozbuduj poniższy zestaw testów i napisz funkcjonalność.
 
-    .. code:: python
+    .. code-block:: python
 
         >>> dane = "() [] () ([]()[])"
         >>> zbalansowanie_nawiasow(a)

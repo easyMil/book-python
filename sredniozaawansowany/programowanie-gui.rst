@@ -7,7 +7,7 @@ Biblioteka Tkinter
 
 * http://www.tkdocs.com/tutorial/index.html
 
-.. code:: python
+.. code-block:: python
 
     #!/usr/bin/env python3
 
@@ -61,7 +61,7 @@ Biblioteka Tkinter
     root.destroy()
 
 
-.. code:: python
+.. code-block:: python
 
     #!/usr/bin/env python3
 
@@ -118,7 +118,7 @@ Biblioteka Tkinter
 
     root.mainloop()
 
-.. code:: python
+.. code-block:: python
 
     #!/usr/bin/env python3
 

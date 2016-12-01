@@ -5,7 +5,7 @@ Funkcje
 Definiowanie funkcji
 ====================
 
-.. code:: python
+.. code-block:: python
 
     def hello():
         print('hello world')
@@ -21,7 +21,7 @@ Konwencja nazewnicza funkcji
 Argumenty do funkcji
 ====================
 
-.. code:: python
+.. code-block:: python
 
     >>> def dodaj(a, b):
     ...    return a + b
@@ -33,7 +33,7 @@ Argumenty do funkcji
 Argumenty nazwane
 -----------------
 
-.. code:: python
+.. code-block:: python
 
     >>> def dodaj(a, b):
     ...    return a + b
@@ -44,7 +44,7 @@ Argumenty nazwane
 Argumenty z wartością domyślną
 ------------------------------
 
-.. code:: python
+.. code-block:: python
 
     >>> def hello(tekst='hello world'):
     ...     print(tekst)
@@ -61,7 +61,7 @@ Zwracanie wartości
 Zwracanie wartości prostych
 ---------------------------
 
-.. code:: python
+.. code-block:: python
 
     def foo1():
         return True
@@ -91,7 +91,7 @@ Zwracanie wartości prostych
 Zwracanie typów złożonych
 -------------------------
 
-.. code:: python
+.. code-block:: python
 
     def foo9():
         return [
@@ -102,12 +102,12 @@ Zwracanie typów złożonych
 Rozpakowywanie wartości zwracanych
 ----------------------------------
 
-.. code:: python
+.. code-block:: python
 
     >>> napiece, natezenie, *args = foo7()
     >>> napiecie, *_ = foo7()
 
-.. code:: python
+.. code-block:: python
 
     >>> value, _ = function()
     >>> value, *args = function()
@@ -120,7 +120,7 @@ Operator ``*`` i ``**``
 Argumenty ``*args``, ``**kwargs``
 ---------------------------------
 
-.. code:: python
+.. code-block:: python
 
     def foo(a, b, *args, **kwargs):
         print(locals())
@@ -128,7 +128,7 @@ Argumenty ``*args``, ``**kwargs``
 Przy wywołaniu funkcji
 ----------------------
 
-.. code:: python
+.. code-block:: python
 
     foo(1, 2, **{'napiecie':10, 'natezenie': 20, 'moc': 3})
 
@@ -163,7 +163,7 @@ Przy wywołaniu funkcji
 Przykładowe zastosowanie
 ------------------------
 
-.. code:: python
+.. code-block:: python
 
     class Osoba:
         first_name = 'Matt'

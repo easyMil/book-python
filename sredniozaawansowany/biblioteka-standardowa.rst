@@ -5,7 +5,7 @@ Biblioteka standardowa
 ``datetime``
 ============
 
-.. code:: python
+.. code-block:: python
 
     import datetime
 
@@ -21,7 +21,7 @@ Biblioteka standardowa
 ``os``
 ======
 
-.. code:: python
+.. code-block:: python
 
     import os
 
@@ -34,7 +34,7 @@ Biblioteka standardowa
 ``sys``
 =======
 
-.. code:: python
+.. code-block:: python
 
     import sys
 
@@ -46,7 +46,7 @@ Biblioteka standardowa
 ``logging``
 ===========
 
-.. code:: python
+.. code-block:: python
 
     import logging
 
@@ -63,7 +63,7 @@ Biblioteka standardowa
 ``warnings``
 ============
 
-.. code:: python
+.. code-block:: python
 
     import warnings
 
@@ -72,7 +72,7 @@ Biblioteka standardowa
 ``pprint``
 ==========
 
-.. code:: python
+.. code-block:: python
 
     from pprint import pprint
 
@@ -87,7 +87,7 @@ Biblioteka standardowa
 ``csv``
 =======
 
-.. code:: python
+.. code-block:: python
 
     import csv
 
@@ -100,7 +100,7 @@ Biblioteka standardowa
 ``json``
 ========
 
-.. code:: python
+.. code-block:: python
 
     import json
 
@@ -113,7 +113,7 @@ Biblioteka standardowa
 ``re``
 ======
 
-.. code:: python
+.. code-block:: python
 
     import re
 
@@ -137,7 +137,7 @@ Biblioteka standardowa
 ``io``
 ======
 
-.. code:: python
+.. code-block:: python
 
     import io
 
@@ -152,7 +152,7 @@ Biblioteka standardowa
 ``math``
 ========
 
-.. code:: python
+.. code-block:: python
 
     import math
 
@@ -164,7 +164,7 @@ Biblioteka standardowa
 ``statistics``
 ==============
 
-.. code:: python
+.. code-block:: python
 
     import statistics
 
@@ -175,7 +175,7 @@ Biblioteka standardowa
 ``random``
 ==========
 
-.. code:: python
+.. code-block:: python
 
     import random
 
@@ -185,7 +185,7 @@ Biblioteka standardowa
 ``subprocess``
 ==============
 
-.. code:: python
+.. code-block:: python
 
     import subprocess
 
@@ -194,7 +194,7 @@ Biblioteka standardowa
 ``doctest``
 ===========
 
-.. code:: python
+.. code-block:: python
 
     import doctest
 
@@ -224,7 +224,7 @@ Define how a single command-line argument should be parsed. Each parameter has i
 * metavar - A name for the argument in usage messages.
 * dest - The name of the attribute to be added to the object returned by parse_args().
 
-.. code:: python
+.. code-block:: python
 
     import argparse
 
@@ -258,7 +258,7 @@ Define how a single command-line argument should be parsed. Each parameter has i
     script = parser.parse_args()
 
 
-.. code:: python
+.. code-block:: python
 
     try:
        script = parser.parse_args()

@@ -5,7 +5,7 @@ Dobre praktyki
 PEP20 - Zen of Python
 =====================
 
-.. code:: python
+.. code-block:: python
 
     import this
 
@@ -64,7 +64,7 @@ Wcięcia
 
 Tak:
 
-.. code:: python
+.. code-block:: python
 
     # Aligned with opening delimiter.
     foo = long_function_name(var_one, var_two,
@@ -83,7 +83,7 @@ Tak:
 
 Nie:
 
-.. code:: python
+.. code-block:: python
 
     # Arguments on first line forbidden when not using vertical alignment.
     foo = long_function_name(var_one, var_two,
@@ -98,7 +98,7 @@ Nie:
 Zamykanie nawiasów
 ------------------
 
-.. code:: python
+.. code-block:: python
 
     my_list = [
         1, 2, 3,
@@ -112,7 +112,7 @@ Zamykanie nawiasów
 
 Lub:
 
-.. code:: python
+.. code-block:: python
 
     my_list = [
         1, 2, 3,
@@ -136,13 +136,13 @@ To jest dość kontrowersyjna klauzula mówiąca o tym, że długość linii po
 
 Linie możemy łamać poprzez stawianie znaku ukośnika ``\`` na końcu:
 
-.. code:: python
+.. code-block:: python
 
     with open('/path/to/some/file/you/want/to/read') as file_1, \
          open('/path/to/some/file/being/written', 'w') as file_2:
         file_2.write(file_1.read())
 
-.. code:: python
+.. code-block:: python
 
     class Rectangle(Blob):
 
@@ -182,20 +182,20 @@ Każdy z importów powinien być w osobnej linii.
 
 Tak:
 
-.. code:: python
+.. code-block:: python
 
     import os
     import sys
 
 Nie:
 
-.. code:: python
+.. code-block:: python
 
     import sys, os
 
 Ale można:
 
-.. code:: python
+.. code-block:: python
 
     from subprocess import Popen, PIPE
 
@@ -209,7 +209,7 @@ Białe spacje w wyrażeniach
 
 Tak:
 
-.. code:: python
+.. code-block:: python
 
     spam(ham[1], {eggs: 2})
 
@@ -249,7 +249,7 @@ Tak:
 
 Nie:
 
-.. code:: python
+.. code-block:: python
 
     spam( ham[ 1 ], { eggs: 2 } )
 
@@ -319,13 +319,13 @@ Konstrukcje warunkowe
 
 Yes:
 
-.. code:: python
+.. code-block:: python
 
     if foo is not None:
 
 No:
 
-.. code:: python
+.. code-block:: python
 
     if not foo is None:
 
@@ -334,7 +334,7 @@ Zwracanie z funkcji
 
 Tak:
 
-.. code:: python
+.. code-block:: python
 
     def foo(x):
         if x >= 0:
@@ -349,7 +349,7 @@ Tak:
 
 Nie:
 
-.. code:: python
+.. code-block:: python
 
     def foo(x):
         if x >= 0:
@@ -365,7 +365,7 @@ Sprawdzanie warunków
 
 Tak:
 
-.. code:: python
+.. code-block:: python
 
     if not seq:
     if seq:
@@ -374,7 +374,7 @@ Tak:
 
 Nie:
 
-.. code:: python
+.. code-block:: python
 
     if len(seq)
     if not len(seq)
@@ -389,7 +389,7 @@ Kilka przykaładów z praktyki
 ============================
 
 ``html.append('<tag>')``
---------------------------
+------------------------
 
 Magic number i Magic string
 ===========================

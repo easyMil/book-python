@@ -4,7 +4,7 @@ Podstawy składni języka
 
 
 Ehlo World!
-============
+===========
 
 W lekcjach programowania utarło się, że zawsze zaczynamy od już przysłowiowego "Hello World". Skrypty czy programy tego typu nie mają na celu pokazania jak minimalną ilością znaków da się wyświetlić coś na ekranie, a sposób interakcji i przepływu programista-komputer.
 
@@ -35,7 +35,7 @@ Wynik uruchomienia powyższego skryptu będzie identyczny z efektem uzyskanym w 
 
 Dla wszystkich, którzy potrzebują wiedzieć jak wygląda najmniejszy kod, który wyświetli nam te słowa polecam poniższy kod.
 
-.. code:: python
+.. code-block:: python
 
     print('Hello World!')
 
@@ -58,7 +58,7 @@ Deklaracja kodowania znaków w pliku
 
 Jest to kolejny rodzaj specjalnego komentarza, który instruuje interpreter i jawnie wskazuje na sposób kodowania znaków w pliku z kodem źródłowym. W skryptach Pythona w wersji drugiej był obowiązkowy, jeżeli w kodzie lub komentarzach w pliku znajdowały się znaki z poza zakresu ASCII, np. polskie znaki diakrytyczne ą, ę, ś, ć itp.
 
-.. code:: python
+.. code-block:: python
 
     # -*- coding: utf-8 -*-
 
@@ -78,7 +78,7 @@ Jest to chyba najbardziej ciekawa rzecz w samym języku. Autorzy specyfikacji zd
 
 Sama idea spowodowała dużą polaryzację programistów. Jedni bardzo sobie chwalą to rozwiązanie, a inni przyzwyczajeni do języków przypominających składnią C są jej zaciekłymi wrogami. Osobiście jestem wielkim zwolennikiem takiego rozwiązania!
 
-.. code:: python
+.. code-block:: python
 
     >>> from __future__ import braces
       File "<stdin>", line 1
@@ -130,7 +130,7 @@ Komentowanie linii
 
 W Pythonie mamy kilka sposobów komentowania. Najprostszym z nich jest komentowanie całej linii poprzez wykorzystanie znaku zwanego "pound" lub "hash" ``#``. Ciąg znaków znajdujących się za ``#`` zostanie zignorowany przez kompilator.
 
-.. code:: python
+.. code-block:: python
 
     >>> #na ekranie otrzymamy: Hello World!
     ... print('Hello World!')
@@ -144,7 +144,7 @@ Komentarze inline
 
 Kolejnym sposobem jest komentowanie inline tzn. w linijce. Tego typu komentarze stosuje się aby wytłumaczyć zachowanie poszczególnych linii kodu. Choć kompilator dopuszcza ich stosowanie, to w ramach dobrych praktyk lepiej zastąpić je komentarzami w linijce poprzedzającej wywołanie.
 
-.. code:: python
+.. code-block:: python
 
     >>> print('Hello Wold!') #na ekranie otrzymamy: Hello World!
     Hello Wold!
@@ -160,7 +160,7 @@ Komentarze wieloliniowe w Pythonie można robić na dwa sposoby poprzez wykorzys
 
 W jednym i drugim przypadku cudzysłowie podwójne lub pojedyncze będzie oznaczało początek jak i koniec komentarza. Rodzaj cudzysłowiów nie ma znaczenia, ale utarło się aby stosować podwójne ``"``. W materiałach będziemy korzystać właśnie z tej notacji.
 
-.. code:: python
+.. code-block:: python
 
     """
     Tu jest treść komentarza, który obejmuje wiele linii

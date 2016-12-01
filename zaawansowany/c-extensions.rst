@@ -30,7 +30,7 @@ C Types
     gcc -fPIC -c -o hello-ctypes.o hello-ctypes.c -I/usr/local/Cellar/python3/3.5.2/Frameworks/Python.framework/Versions/3.5/include/python3.5m/
     gcc -shared hello-ctypes.o -o hello-ctypes.so
 
-.. code:: python
+.. code-block:: python
 
     import ctypes
 
@@ -140,7 +140,7 @@ Python 2
 ``setup.py``
 ------------
 
-.. code:: python
+.. code-block:: python
 
     import sys
     from distutils.core import setup, Extension
@@ -169,7 +169,7 @@ Python 2
     cd build/lib*
     python
 
-.. code:: python
+.. code-block:: python
 
     import hello
     hello.say_hello('Matt')

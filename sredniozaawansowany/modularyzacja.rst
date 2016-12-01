@@ -28,7 +28,7 @@ Tworzenie paczek
 ``setup.py``
 ------------
 
-.. code:: python
+.. code-block:: python
 
     import sys
     from setuptools import find_packages
