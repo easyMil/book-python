@@ -7,7 +7,7 @@ REST API
 
 Używając biblioteki standardowej w Pythonie zaciągnij informacje o repozytoriach użytkownika Django na https://github.com
 
-* wygeneruj w swoim profilu token https://github.com/settings/tokens
+* w przeglądarce internetowej wygeneruj w swoim profilu token https://github.com/settings/tokens
 
 * Następnie z przeglądnij listę z poziomu Pythona i znajdź URL dla repozytorium ``django``.
 
