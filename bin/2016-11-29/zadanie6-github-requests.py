@@ -3,7 +3,7 @@
 import re
 import requests
 
-auth = ('astromatt', 'fc677158d58421ed167241297feec8875b555318')
+auth = ('username', 'token')
 
 resp = requests.get('https://api.github.com/orgs/django/repos', auth=auth)
 repositories = resp.json()

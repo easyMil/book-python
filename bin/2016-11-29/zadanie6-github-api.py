@@ -8,7 +8,7 @@ import http.client
 
 client = http.client.HTTPSConnection('api.github.com')
 
-auth = b'astromatt:fc677158d58421ed167241297feec8875b555318'
+auth = b'username:token'
 hash = base64.b64encode(auth).decode('ascii')
 headers={
         'Autorization': 'Basic {}'.format(hash),
