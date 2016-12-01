@@ -7,7 +7,7 @@ import subprocess
 extensions = [
     #'sphinx.ext.autodoc',
     'sphinx.ext.doctest',
-    'sphinx.ext.githubpages',
+    #'sphinx.ext.githubpages',
     #'sphinx.ext.todo',
     #'sphinx.ext.coverage',
     #'sphinx.ext.imgmath',
