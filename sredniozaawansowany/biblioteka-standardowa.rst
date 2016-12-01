@@ -43,23 +43,6 @@ Biblioteka standardowa
     sys.platform
 
 
-``logging``
-===========
-
-.. code-block:: python
-
-    import logging
-
-    logging.basicConfig(level=logging.DEBUG)
-    logging.basicConfig(format='[%(asctime).19s] [%(levelname)s] %(message)s')
-
-    logging.critical('Błąd krytyczny, kończę.')
-    logging.error('Błąd, ale kontynuuję.')
-    logging.warning('Uwaga będę coś robił')
-    logging.info('Będę coś robił')
-    logging.debug('Robię to tak')
-
-
 ``warnings``
 ============
 

@@ -41,6 +41,7 @@ Spis Treści
    podstawy/pliki.rst
    podstawy/doctests.rst
    podstawy/print-formatting.rst
+   podstawy/logging.rst
 
    podstawy/programowanie-obiektowe.rst
    podstawy/serializacja.rst
@@ -95,6 +96,8 @@ Spis Treści
    zalaczniki/python-2vs3.rst
    zalaczniki/wybor-ide.rst
    zalaczniki/ekosystem-narzedziowy.rst
+   zalaczniki/python-wat.rst
+
 
 .. toctree::
    :maxdepth: 3
