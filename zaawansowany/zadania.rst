@@ -29,34 +29,12 @@ Używając biblioteki standardowej w Pythonie zaciągnij informacje o repozytori
 
 .. code:: python
 
-    import http
-    import base64
+    auth = b'username:token'
+    headers={
+        'Authorization': 'Basic {}'.format(base64.b64encode(auth).decode('ascii')),
+        'User-Agent': 'Python HTTP',
+    }
 
-    # This sets up the https connection
-    c = http.client.HTTPSConnection('api.github.com/')
-
-    # we need to base 64 encode it
-    # and then decode it to acsii as python 3 stores it as a byte string
-    userAndPass = base64.b64encode(b'username:password').decode('ascii')
-    headers = { 'Authorization' : 'Basic %s' %  userAndPass }
-
-    # then connect
-    url = '/repos/dajngo/django/commits'
-    c.request('GET', url, headers=headers)
-
-    # get the response back
-    res = c.getresponse()
-
-    # at this point you could check the status etc
-    # this gets the page text
-    data = res.read()
-
-.. code:: python
-
-    import requests
-
-    r = requests.get('https://api.github.com/repos/dajngo/django/commits', auth=('myusername', 'mybasicpass'))
-    print(r.text)
 
 Generatory vs. Przetwarzanie Listy
 ==================================
