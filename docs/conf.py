@@ -4,7 +4,7 @@ import shlex
 import subprocess
 
 
-def version():
+def get_version():
     return subprocess.Popen('git log -1 --format="%h"', stdout=subprocess.PIPE, shell=True).stdout.read().decode().replace('\n', '')
 
 extensions = [
@@ -24,8 +24,8 @@ master_doc = 'index'
 project = 'Python Workshop'
 copyright = '2015-2017, Matt Harasymczuk'
 author = 'Matt Harasymczuk'
-version = version()
-release = version()
+version = get_version()
+release = get_version()
 language = 'pl'
 exclude_patterns = ['_build', '_themes']
 pygments_style = 'vs'
