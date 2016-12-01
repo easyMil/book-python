@@ -1,6 +1,5 @@
 def bar():
-    if 10
-        p
+    raise NameError
 
 
 def foo():

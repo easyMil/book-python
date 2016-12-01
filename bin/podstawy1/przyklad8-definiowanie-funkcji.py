@@ -1,3 +1,2 @@
-
-
-def foo()
+def foo():
+    print('hello')
