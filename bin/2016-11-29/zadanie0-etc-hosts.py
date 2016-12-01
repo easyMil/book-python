@@ -24,7 +24,7 @@ hosts = [
 ]
 """
 
-FILENAME = '/etc/hosts'
+FILENAME = '../../tmp/etc-hosts'
 hosts = []
 
 

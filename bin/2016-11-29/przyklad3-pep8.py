@@ -38,6 +38,6 @@ def pelnoletni(wiek):
 
 
 
-with open('/etc/passwd') as passwd:
+with open('../../tmp/etc-passwd') as passwd:
     passwd.read()
 

@@ -16,7 +16,7 @@ def make_key(key, k):
         return '{}_{}'.format(key, k)
 
 
-with open('../tmp/fixtures-flat.json') as file:
+with open('../../tmp/fixtures-flat.json') as file:
     content = file.read()
 
 

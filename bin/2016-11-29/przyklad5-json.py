@@ -2,8 +2,8 @@ from pprint import pprint
 import json
 import datetime
 
-INPUT = '../tmp/fixtures.json'
-OUTPUT = '../tmp/fixtures-new.json'
+INPUT = '../../tmp/fixtures.json'
+OUTPUT = '../../tmp/fixtures-new.json'
 
 
 def make_datetime(string):
