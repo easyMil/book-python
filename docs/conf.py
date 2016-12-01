@@ -2,10 +2,14 @@ import sys
 import os
 import shlex
 import subprocess
-
+import datetime
 
 def get_version():
-    return subprocess.Popen('git log -1 --format="%h"', stdout=subprocess.PIPE, shell=True).stdout.read().decode().replace('\n', '')
+    return '#{sha1}, {date:%Y-%m-%d}'.format(
+        sha1=subprocess.Popen('git log -1 --format="%h"', stdout=subprocess.PIPE, shell=True).stdout.read().decode().replace('\n', ''),
+        date=datetime.date.today(),
+    )
+
 
 extensions = [
     #'sphinx.ext.autodoc',
