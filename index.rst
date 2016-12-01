@@ -59,6 +59,7 @@ Spis Treści
 
    sredniozaawansowany/biblioteka-standardowa.rst
    sredniozaawansowany/biblioteki-zewnetrzne.rst
+   sredniozaawansowany/linia-polecen.rst
    sredniozaawansowany/modularyzacja.rst
    sredniozaawansowany/regex.rst
    sredniozaawansowany/testy.rst
@@ -80,7 +81,6 @@ Spis Treści
    zaawansowany/watki-i-procesy.rst
    zaawansowany/programowanie-funkcyjne.rst
    zaawansowany/programowanie-sieciowe.rst
-   zaawansowany/collections.rst
    zaawansowany/wzorce-projektowe.rst
    zaawansowany/c-extensions.rst
    zaawansowany/zadania.rst
