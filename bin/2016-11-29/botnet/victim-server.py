@@ -7,7 +7,7 @@ import io
 
 
 logging.basicConfig(level=logging.INFO)
-log = logging.getLogger('botnet-server')
+log = logging.getLogger('botnet.victim.server')
 
 
 class MyTCPHandler(socketserver.BaseRequestHandler):
