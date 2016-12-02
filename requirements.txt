@@ -6,3 +6,4 @@ ipython
 coverage
 django
 requests
+lxml

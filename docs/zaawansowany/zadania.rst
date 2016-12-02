@@ -64,27 +64,6 @@ Napisz program, który wczyta plik ``/etc/passwd``, a następnie:
 
 * Porównaj wyniki jednego i drugiego rozwiązania przez użycie ``sys.getsizeof()``
 
-Mini Botnet
-===========
-
-Stwórz program, który otworzy socket na porcie na localhoście podanym przez użytkownika z linii poleceń (wykorzystaj ``argparse``) i będzie nasłuchiwał połączeń. Zweryfikuj za pomocą ``telnet`` albo ``netcat`` czy program odpowiada. Następnie napisz w pythonie klienta, który będzie wysyłał polecenia do tamtego programu.
-
-Uwaga, nigdy nie rób tego na produkcji bez tzw. sanityzacji parametrów, np. lista zaufanych hostów, możliwe polecenia!
-
-* zrób aby przetwarzanie requestów było nieblokujące, tzn. otwieraj wątek dla każdego zapytania
-* program wykona polecenie za pomocą ``eval``, które przyszło z zapytania
-* wykonaj polecenie w systemie operacyjnym i zwróć klientowi odpowiedź
-* dodaj funkcję aby wyświetlał dowolny plik
-* dodaj funkcję aby listował dowolny katalog - wykorzystaj ``os.walk`` oraz ``os.path.join`` do łączenia nazw katalogów
-* zmodyfikuj program aby przyjmował zapytania w formacie XML, pole command oraz arguments powinny być osobno
-* zmodyfikuj program aby przyjmował zapytania w formacie JSON, pole command oraz arguments powinny być osobno
-* stwórz dekorator ``localhost_only``, który będzie sprawdzał IP źródłowe połączenia i jeżeli nie pochodzi z ``127.0.0.1`` odmówi wykonania polecenia
-* stwórz dekorator ``log_request``, który weźmie parametry zapytania (IP, polecenie, argumenty) i zapisze je do pliku ``/tmp/botnet.log`` w formacie ``Request from IP:PORT to execute COMMAND ARGUMENTS``
-
-:Podpowiedź:
-    * ``subprocess.Popen``
-    * użyj ``os.path.join`` do łączenia sciezki i nazwy pliku
-
 Wielowątkowość
 ==============
 
@@ -107,4 +86,25 @@ Wielowątkowość
 
         with Popen(shlex.split(cmd), stdout=PIPE) as proc:
             log.write(proc.stdout.read())
+
+Mini Botnet
+===========
+
+Stwórz program, który otworzy socket na porcie na localhoście podanym przez użytkownika z linii poleceń (wykorzystaj ``argparse``) i będzie nasłuchiwał połączeń. Zweryfikuj za pomocą ``telnet`` albo ``netcat`` czy program odpowiada. Następnie napisz w pythonie klienta, który będzie wysyłał polecenia do tamtego programu.
+
+Uwaga, nigdy nie rób tego na produkcji bez tzw. sanityzacji parametrów, np. lista zaufanych hostów, możliwe polecenia!
+
+* zrób aby przetwarzanie requestów było nieblokujące, tzn. otwieraj wątek dla każdego zapytania
+* program wykona polecenie za pomocą ``eval``, które przyszło z zapytania
+* wykonaj polecenie w systemie operacyjnym i zwróć klientowi odpowiedź
+* dodaj funkcję aby wyświetlał dowolny plik
+* dodaj funkcję aby listował dowolny katalog - wykorzystaj ``os.walk`` oraz ``os.path.join`` do łączenia nazw katalogów
+* zmodyfikuj program aby przyjmował zapytania w formacie XML, pole command oraz arguments powinny być osobno
+* zmodyfikuj program aby przyjmował zapytania w formacie JSON, pole command oraz arguments powinny być osobno
+* stwórz dekorator ``localhost_only``, który będzie sprawdzał IP źródłowe połączenia i jeżeli nie pochodzi z ``127.0.0.1`` odmówi wykonania polecenia
+* stwórz dekorator ``log_request``, który weźmie parametry zapytania (IP, polecenie, argumenty) i zapisze je do pliku ``/tmp/botnet.log`` w formacie ``Request from IP:PORT to execute COMMAND ARGUMENTS``
+
+:Podpowiedź:
+    * ``subprocess.Popen``
+    * użyj ``os.path.join`` do łączenia sciezki i nazwy pliku
 

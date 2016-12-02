@@ -80,6 +80,21 @@ Uruchamianie poleceń
         ret = proc.stdout.read()
         print(ret)
 
+Timeout dla wykonywania poleceń
+===============================
+
+* ``subprocess.run()`` - New in Python 3.5
+
+.. code-block:: python
+
+    import subprocess
+    cmd = ['ping', 'www.google.com']
+
+    try:
+        subprocess.run(cmd, timeout=5)
+    except subprocess.TimeoutExpired:
+        print('process ran too long')
+
 
 Parsowanie i sanityzacja argumentów
 ===================================
