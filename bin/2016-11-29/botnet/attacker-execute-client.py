@@ -4,14 +4,16 @@ import logging
 from pprint import pprint
 
 
-HOST, PORT = "localhost", 1337
-COMMANDS = '../../../tmp/botnet-commands.xml'
+HOST = "localhost"
+PORT = 1337
+XML_CMD_FILE = '../../../tmp/botnet-commands.xml'
+
 
 logging.basicConfig(level=logging.INFO)
 log = logging.getLogger('botnet.atacker.client')
 
 
-with open(COMMANDS) as file:
+with open(XML_CMD_FILE) as file:
     commands = file.read()
 
 
@@ -19,7 +21,8 @@ log.debug('Create a socket (SOCK_STREAM means a TCP socket)')
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
 
     log.debug('Connect to server and send data')
-    sock.connect((HOST, PORT))
+    addr = (HOST, PORT)
+    sock.connect(addr)
     sock.sendall(bytes(commands + "\n", "utf-8"))
 
     log.debug('Receive data from the server and shut down')
