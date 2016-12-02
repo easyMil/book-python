@@ -4,7 +4,7 @@ import logging
 import xml.etree.ElementTree
 import subprocess
 
-FILENAME = 'xml-execute-commands.xml'
+FILENAME = 'xml-botnet-commands.xml'
 LOG_FORMAT = '[%(levelname)-5s] %(filename)s:%(lineno)s - %(msg).110s'
 
 
