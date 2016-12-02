@@ -8,6 +8,7 @@ class HelloWorldView(TemplateView):
 
     def get_context_data(self, nazwisko, **kwargs):
         return {
-            'kontakt': Kontakt.objects.get(nazwisko=nazwisko)
+            'kontakt': Kontakt.objects.get(nazwisko=nazwisko),
+            'kontakty': Kontakt.objects.all(),
         }
 
