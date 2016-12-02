@@ -1,6 +1,18 @@
-***************
-Wątki i procesy
-***************
+************************
+Kolejki, wątki i procesy
+************************
+
+Kolejki
+=======
+
+Queue
+-----
+
+PriorityQueue
+
+__all__ = ['Empty', 'Full', 'Queue', 'PriorityQueue', 'LifoQueue']
+
+
 
 Wątki a procesy
 ===============
@@ -122,11 +134,13 @@ Workery
 
         def run(self):
             while True:
+                # Remove and return an item from the queue.
                 job = kolejka.get()
 
-                # Tutaj wykonaj pracę
+                # Execute work
                 logging.warning('Will do the work: %s' % job)
 
+                # Indicate that a formerly enqueued task is complete.
                 kolejka.task_done()
 
 

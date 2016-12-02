@@ -76,8 +76,10 @@ Uruchamianie poleceń
 
     cmd = 'ls -la'
 
-    with Popen(shlex.split(cmd), stdout=PIPE) as proc:
-        log.write(proc.stdout.read())
+    with subprocess.Popen(shlex.split(cmd), stdout=subprocess.PIPE) as proc:
+        ret = proc.stdout.read()
+        print(ret)
+
 
 Parsowanie i sanityzacja argumentów
 ===================================
