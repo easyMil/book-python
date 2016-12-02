@@ -14,9 +14,11 @@ class myThread (threading.Thread):
 
     def run(self):
         print("Starting %s" % self.name)
+
         # Get lock to synchronize threads
         threadLock.acquire()
         print_time(self.name, self.counter, 3)
+
         # Free lock to release next thread
         threadLock.release()
 

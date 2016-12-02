@@ -73,13 +73,17 @@ Uwaga, nigdy nie rób tego na produkcji bez tzw. sanityzacji parametrów, np. li
 
 * zrób aby przetwarzanie requestów było nieblokujące, tzn. otwieraj wątek dla każdego zapytania
 * program wykona polecenie za pomocą ``eval``, które przyszło z zapytania
-* wykonaj polecenie za pomocą Subproces i Popen w systemie operacyjnym i zwróć klientowi odpowiedź
-* dodaj funkcję aby wyświetlał dowolny plik ``cat SCIEZKA/NAZWA`` (użyj ``os.path.join`` do łączenia sciezki i nazwy pliku
+* wykonaj polecenie w systemie operacyjnym i zwróć klientowi odpowiedź
+* dodaj funkcję aby wyświetlał dowolny plik
 * dodaj funkcję aby listował dowolny katalog - wykorzystaj ``os.walk`` oraz ``os.path.join`` do łączenia nazw katalogów
 * zmodyfikuj program aby przyjmował zapytania w formacie XML, pole command oraz arguments powinny być osobno
 * zmodyfikuj program aby przyjmował zapytania w formacie JSON, pole command oraz arguments powinny być osobno
 * stwórz dekorator ``localhost_only``, który będzie sprawdzał IP źródłowe połączenia i jeżeli nie pochodzi z ``127.0.0.1`` odmówi wykonania polecenia
 * stwórz dekorator ``log_request``, który weźmie parametry zapytania (IP, polecenie, argumenty) i zapisze je do pliku ``/tmp/botnet.log`` w formacie ``Request from IP:PORT to execute COMMAND ARGUMENTS``
+
+:Podpowiedź:
+    * ``subprocess.Popen``
+    * użyj ``os.path.join`` do łączenia sciezki i nazwy pliku
 
 Wielowątkowość
 ==============
@@ -92,4 +96,15 @@ Wielowątkowość
 * Wątki mają być uruchomione w tle (ang. ``daemon``)
 * Użyj logowania za pomocą biblioteki ``logging`` tak aby przy wyświetlaniu wyników widoczny był identyfikator procesu i wątku
 * Napisz testy do workerów i kolejki
+
+:Podpowiedź:
+    .. code-block:: python
+
+        import subprocess
+        import shlex
+
+        cmd = 'ls -la'
+
+        with Popen(shlex.split(cmd), stdout=PIPE) as proc:
+            log.write(proc.stdout.read())
 

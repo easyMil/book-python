@@ -4,7 +4,7 @@ import queue
 import threading
 import time
 
-exitFlag = 0
+global_exit_flag = 0
 
 
 class myThread (threading.Thread):
@@ -22,48 +22,48 @@ class myThread (threading.Thread):
 
 
 def process_data(threadName, q):
-    while not exitFlag:
-        queueLock.acquire()
+    while not global_exit_flag:
+        queue_lock.acquire()
 
-        if not workQueue.empty():
+        if not work_queue.empty():
             data = q.get()
-            queueLock.release()
+            queue_lock.release()
             print("%s processing %s" % (threadName, data))
         else:
-            queueLock.release()
+            queue_lock.release()
 
         time.sleep(1)
 
 
-threadList = ["Thread-1", "Thread-2", "Thread-3"]
-nameList = ["One", "Two", "Three", "Four", "Five"]
-queueLock = threading.Lock()
-workQueue = queue.Queue(10)
+thread_names = ["Thread-1", "Thread-2", "Thread-3"]
+jobs = ["One", "Two", "Three", "Four", "Five"]
+queue_lock = threading.Lock()
+work_queue = queue.Queue(10)
 threads = []
-threadID = 1
+thread_id = 1
 
 
 # Create new threads
-for tName in threadList:
-    thread = myThread(threadID, tName, workQueue)
+for name in thread_names:
+    thread = myThread(thread_id, name, work_queue)
     thread.start()
     threads.append(thread)
-    threadID += 1
+    thread_id += 1
 
 
 # Fill the queue
-queueLock.acquire()
-for word in nameList:
-    workQueue.put(word)
-queueLock.release()
+queue_lock.acquire()
+for word in jobs:
+    work_queue.put(word)
+queue_lock.release()
 
 
 # Wait for queue to empty
-while not workQueue.empty():
+while not work_queue.empty():
     pass
 
 # Notify threads it's time to exit
-exitFlag = 1
+global_exit_flag = 1
 
 # Wait for all threads to complete
 for t in threads:

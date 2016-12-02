@@ -65,3 +65,34 @@ Define how a single command-line argument should be parsed. Each parameter has i
        script = parser.parse_args()
     except SystemExit:
         pass
+
+Uruchamianie poleceń
+====================
+
+.. code-block:: python
+
+    import subprocess
+    import shlex
+
+    cmd = 'ls -la'
+
+    with Popen(shlex.split(cmd), stdout=PIPE) as proc:
+        log.write(proc.stdout.read())
+
+Parsowanie i sanityzacja argumentów
+===================================
+
+.. code-block:: python
+
+    >>> import shlex
+    >>> import subprocess
+
+    >>> command_line = input()
+    /bin/vikings -input eggs.txt -output "spam spam.txt" -cmd "echo '$MONEY'"
+
+    >>> args = shlex.split(command_line)
+
+    >>> print(args)
+    ['/bin/vikings', '-input', 'eggs.txt', '-output', 'spam spam.txt', '-cmd', "echo '$MONEY'"]
+
+    >>> p = subprocess.Popen(args) # Success!

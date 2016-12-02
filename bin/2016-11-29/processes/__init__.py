@@ -20,10 +20,16 @@ class Prostokat:
         if a <= 0 or b <= 0:
             raise ValueError('Długość boku musi być dodatnia')
 
-    def pole(self):
+    def pole(self) -> int:
+        """
+        Wyświtla pole dla danej figury
+        """
         return self.a * self.b
 
-    def obwod(self):
+    def obwod(self) -> int:
+        """
+        Wyświtla obwod dla danej figury
+        """
         return (self.a + self.b) * 2
 
     def __str__(self):
