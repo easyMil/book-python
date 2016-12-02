@@ -30,7 +30,4 @@ if __name__ == '__main__':
     logging.info('Listening for pings on %s...', addr)
     listener = socketserver.UDPServer(addr, UDPHandler)
 
-    try:
-        listener.serve_forever()
-    except KeyboardInterrupt:
-        sys.exit()
+    listener.serve_forever()

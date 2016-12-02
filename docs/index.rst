@@ -96,6 +96,7 @@ Spis Treści
    zalaczniki/python-2vs3.rst
    zalaczniki/wybor-ide.rst
    zalaczniki/ekosystem-narzedziowy.rst
+   zalaczniki/ksiazki.rst
    zalaczniki/python-wat.rst
 
 

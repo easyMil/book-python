@@ -9,7 +9,9 @@ PORT = 1337
 XML_CMD_FILE = '../../../tmp/botnet-commands.xml'
 
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(
+    level=logging.INFO,
+    format='[%(asctime).19s] %(levelname)s (%(name)s) %(message)s')
 log = logging.getLogger('botnet.atacker.client')
 
 

