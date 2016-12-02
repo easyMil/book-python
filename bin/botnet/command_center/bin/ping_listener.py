@@ -1,14 +1,4 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-"""
-  Pawel Wylecial
-  h0wl@cc-team.org
-
-  Matt Harasymczuk
-  matt@harasymczuk.pl
-  www.matt.harasymczuk.pl
-"""
+#!/usr/bin/env python3
 
 import socketserver
 import sys
@@ -17,7 +7,6 @@ import logging
 from __init__ import COMMAND_CENTER_HOST
 from __init__ import COMMAND_CENTER_PORT
 
-from django.db import models
 from command_center_panel.models.hosts import Host
 from command_center_panel.models.pings import Ping
 
@@ -27,25 +16,19 @@ class UDPHandler(socketserver.BaseRequestHandler):
         try:
             msg = self.request[0].strip()
             ip, port = msg.split(':')
-            logging.info("Ping received from %s" % msg)
-        except:
+            logging.info('Ping received from %s' % msg)
+        except Exception:
             return
 
-        try:
-            host = Host.objects.get(ip=ip, port=port)
-        except:
-            host = Host(ip=ip, port=port)
-            host.save()
-
-        ping = Ping(host=host)
-        ping.save()
+        host, _ = Host.objects.get_or_create(ip=ip, port=port)
+        Ping.objects.create(host=host)
 
 
-if __name__ == "__main__":
-    logging.info("Listening for pings on %s:%s...", COMMAND_CENTER_HOST, COMMAND_CENTER_PORT)
+if __name__ == '__main__':
+    addr = (COMMAND_CENTER_HOST, COMMAND_CENTER_PORT)
 
-    listener = socketserver.UDPServer(
-        (COMMAND_CENTER_HOST, COMMAND_CENTER_PORT), UDPHandler)
+    logging.info('Listening for pings on %s...', addr)
+    listener = socketserver.UDPServer(addr, UDPHandler)
 
     try:
         listener.serve_forever()

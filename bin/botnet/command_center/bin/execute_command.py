@@ -1,35 +1,29 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-
-"""
-  Pawel Wylecial
-  h0wl@cc-team.org
-  
-  Matt Harasymczuk
-  matt@harasymczuk.pl
-  www.matt.harasymczuk.pl
-"""
-
+#!/usr/bin/env python3
 
 import socket
 import sys
+import logging
 
-from __init__ import *
+from __init__ import COMMAND_CENTER_HOST
+from __init__ import COMMAND_CENTER_PORT
 
-from django.db import models
+
 from command_center_panel.models.hosts import Host
 
-
-data = " ".join( sys.argv[1:] )
-logging.info( "Sending command to execute: '%s'" % data)
+data = ' '.join(sys.argv[1:])
+logging.info('Sending command to execute: "%s"' % data)
 
 try:
-  for bot in Host.objects.filter(active=True):
-    sock = socket.socket( socket.AF_INET, socket.SOCK_DGRAM )
-    sock.bind((COMMAND_CENTER_HOST, COMMAND_CENTER_PORT + 1))
-    sock.sendto( data, ( bot.ip, bot.port ) )
-    sock.close()
-    logging.info( "Command sent to %s:%s" % ( bot.ip, bot.port ))
-      
+    for bot in Host.objects.filter(active=True):
+        srv_addr = (COMMAND_CENTER_HOST, COMMAND_CENTER_PORT + 1)
+        bot_addr = (bot.ip, bot.port)
+
+        sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+        sock.bind(srv_addr)
+
+        logging.info('Command sent to %s', bot_addr)
+        sock.sendto(data, bot_addr)
+        sock.close()
+
 except KeyboardInterrupt:
-  sys.exit()
+    sys.exit()
