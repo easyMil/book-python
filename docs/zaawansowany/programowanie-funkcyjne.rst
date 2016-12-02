@@ -6,11 +6,22 @@ lambda
 
 .. code-block:: python
 
+    def czy_parzysta(x):
+        if x % 2 == 0:
+            return True
+        else:
+            return False
+
+    parzyste = filter(czy_parzysta, liczby)
+
+
     foo = lambda x: x*x
     print(foo(10))
 
-    lista = [1, 2, 3, 4]
-    parzyste = filter(lambda x: x % 2 == 0, lista)
+    liczby = [1, 2, 3, 4]
+    parzyste = filter(lambda x: x % 2 == 0, liczby)
+
+
 
 closure
 -------
@@ -83,14 +94,13 @@ złożenia funkcji
 
 .. code-block:: python
 
-    x = 1
     lista = [1, 2, 3]
 
-    def dodaj_x(y):
-        return x + y
+    def inkrementuj(y):
+        return 1 + y
 
-    map(dodaj_x, lista)
-    map(lambda y: x + y, l)
+    map(inkrementuj, lista)
+    map(lambda y: 1 + y, l)
 
 
 ``zip()``
@@ -136,4 +146,7 @@ złożenia funkcji
 
 
 ``all()``
+---------
+
+``any()``
 ---------
