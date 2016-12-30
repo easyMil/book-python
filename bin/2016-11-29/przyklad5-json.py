@@ -1,3 +1,5 @@
+#!/usr/bin/env python3
+
 from pprint import pprint
 import json
 import datetime
@@ -54,5 +56,36 @@ def _(obj):
 
 
 
-d = json.dumps(data)
-print(d)
+#d = json.dumps(data)
+#print(d)
+
+
+js = '{"survey":{"datetime":"2016-12-27T16:46:02.640Z", "email":"asd@asd.pl"}, "events":[{"datetime":"2016-12-27T16:46:02.640Z", "action":"click"}], "datetime":"2016-12-27T16:46:02.640Z"}'
+
+class DatetimeDecoder(json.JSONDecoder):
+    def __init__(self):
+            json.JSONDecoder.__init__(self, object_hook=self.convert_datetime)
+
+    def convert_datetime(slef, args):
+        for key, value in args.items():
+            if key == 'datetime':
+                args[key] = datetime.datetime.strptime(value, '%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=datetime.timezone.utc)
+        return args
+
+
+
+#out = json.loads(js, cls=DatetimeDecoder)
+#print(out)
+
+
+
+def datetime_decoder(obj):
+    for key, value in obj.items():
+        if key == 'datetime':
+           obj[key] = datetime.datetime.strptime(value, '%Y-%m-%dT%H:%M:%S.%fZ').replace(tzinfo=datetime.timezone.utc)
+    return obj
+
+
+out = json.loads(js, object_hook=datetime_decoder)
+print(out)
+
