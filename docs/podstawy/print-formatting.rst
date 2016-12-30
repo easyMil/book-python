@@ -19,6 +19,14 @@ Nowy styl - ``.format()``
 * operatory na stringu
 * jako parametry do ``print("string", **args)``
 
+f-strings - Python >= 3.6
+=========================
+
+* ``f'{variable}'``
+* ``f'{self.field}'``
+* ``f'{datetime:%Y-%m-%d %H:%M}'``
+
+
 Więcej informacji
 =================
 
