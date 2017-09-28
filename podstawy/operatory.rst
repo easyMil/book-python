@@ -89,6 +89,11 @@ Kolejność operatorów
 Bitwise
 =======
 
+| - OR
+& - AND
+~ - NOT
+^ - XOR
+
 .. code-block:: python
 
     >>> 0^0
