@@ -8,6 +8,7 @@ Słowa kluczowe
 Słowa kluczowe (keywords) to wyrazy zarezerwoane do użytku Pythona. Nie można użyć słowa kluczowego jako nazwy zmiennej, nazwy funkcji czy innego identyfikatora. Każdy ze słów kluczowych odgrywa ważną rolę w tym języku. Lista słów kluczowych może być uzyskana wpisując:
 
 .. code-block:: python
+
     import keyword
     print(keyword.kwlist)
 
@@ -32,12 +33,14 @@ Wykonanie powyższego kodu spowoduje dodanie do aktualnej przestrzeni nazw modu�
 Aby wykorzystać funkcję z danego modułu, musimy najpierw wskazać, z którego modułu chcemy skorzystać a następnie podać nazwę funkcji czy zmiennej do której chcemy się odwołać. Korzystając z przykładu powyżej:
 
 .. code-block:: python
+
     import keyword
     print(keyword.kwlist)
 
 W pierwszej linijce importujemy moduł ``keyword``. W drugiej linijce wypisujemy zawartość zmiennej ``kwlist`` z modułu ``keyword``. Moglibyśmy uzyskać podobny efekt wykonując:
 
 .. code-block:: python
+
     from keyword import kwlist
     print(kwlist)
 

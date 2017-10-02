@@ -61,6 +61,7 @@ Podstawowe użycie jest następujące.
 
 
 .. code-block:: python
+
     x1 = [x*0.01 for x in range(0,628)]
     y1 = [math.sin(x*0.01)+random.gauss(0, 0.1) for x in range(0,628)]
     plt.plot(x1, y1)

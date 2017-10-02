@@ -252,7 +252,6 @@ Funkcja inicjalizująca
 
     import logging
 
-
     class Samochod:
         kierowca = None
 

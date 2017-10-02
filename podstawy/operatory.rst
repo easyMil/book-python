@@ -90,8 +90,11 @@ Bitwise
 =======
 
 | - OR
+
 & - AND
+
 ~ - NOT
+
 ^ - XOR
 
 .. code-block:: python

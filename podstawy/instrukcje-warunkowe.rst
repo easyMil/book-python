@@ -19,6 +19,7 @@ Do instrukcji warunkowej można dodać słowo kluczowe ``else``. Wtedy, jeżeli 
 
 
 .. code-block:: python
+
     if ... :
         print('this is true')
     else:
@@ -143,8 +144,8 @@ Słowo kluczowe ``in`` pozwala na sprawdzenie czy dana wartość zawiera się w 
             'b': 2,
         }[x]
 
-
     switch['a']
+
 
 .. code-block:: python
 
