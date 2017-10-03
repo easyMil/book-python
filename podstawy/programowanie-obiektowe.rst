@@ -8,6 +8,7 @@ Paradygmat Obiektowy
 ====================
 
 W programowaniu istnieje kilka popularnych paradygmatów (idei programowania), są to między innymi:
+
 * imperatywny,
 * deklaratywny,
 * funkcjonalny,
@@ -567,40 +568,25 @@ Punkty i wektory
 Przekształć swój kod z przykładu z modułu "Matematyka" tak żeby wykorzytywał klasy.
 
 :Zadanie 0:
-    Napisz klasę ``ObiektGraficzny``, która implemtuje "wirtualną" funkcję ``plot()``. Niech domyślnie ta funkcja podnosi ``NotImplementedError``.
+    Napisz klasę ``ObiektGraficzny``, która implemtuje "wirtualną" funkcję ``plot()``. Niech domyślnie ta funkcja podnosi ``NotImplementedError`` (podpowiedź: ``raise NotImplementedError``).
 
 :Zadanie 1:
 
-    Napisz klasę ``Punkt``, która dziedziczy po ``ObiektGraficzny``, która będzie miała "ukryte" pola ``_x``, ``_y``. Zaimplementuj metodę ``plot(kolor)``, która wyrysuje ten punkt na aktualnie aktywnym wykresie. Konstruktor tej klasy ma przyjmować współrzędne ``x`` oraz ``y`` jako argumenty. Napisz obsługę pól ukrytych ``_x`` oraz ``_y`` jako ``@property`` tej klasy (obsługiwane jako ``x`` oraz ``y``). Dopisz implementacje metod ``__str__`` oraz ``__repr__``.
+    Napisz klasę ``Punkt``, która dziedziczy po ``ObiektGraficzny``, która będzie miała "ukryte" pola ``_x``, ``_y``. Konstruktor tej klasy ma przyjmować współrzędne ``x`` oraz ``y`` jako argumenty. Napisz obsługę pól ukrytych ``_x`` oraz ``_y`` jako ``@property`` tej klasy (obsługiwane jako ``x`` oraz ``y``). Dopisz implementacje metod ``__str__`` oraz ``__repr__``. Zaimplementuj metodę ``plot(kolor)``, która wyrysuje ten punkt na aktualnie aktywnym wykresie. Kolor domyślnie powinien przyjmować wartość ``'black'``.
 
-    Dopisz do tej klasy metodę statyczną, która zwróci losowy punkt w podobny sposób jak funkcja ``random_point(center, std)`` zwracała obiekt dwuelementowy,
+    Dopisz do tej klasy metodę statyczną, która zwróci losowy punkt w podobny sposób jak funkcja ``random_point(center, std)`` zwracała obiekt dwuelementowy.
 
 :Zadanie 2:
 
-    Napisz klasę ``Wektor``, która odziedziczy po klasie ``ObiektGraficzny``.
-
-    Niech ta klasa posiada również pola ``origin`` oraz ``destination``, które są obiektami klasy ``Punkt``, których wartości domyślne niech będą ``Punkt(0,0)``. Klasa powinna również posiadać pola ``_x`` i ``_y``, które są obliczane zgodnie ze wzorem: ``_x = destination.x - origin.x``, ``_y = destination.y - origin.y``.
-
-    Niech ta klasa zaimplementuje nową funkcję ``plot(kolor)``, która wyrysuje linię łączącą punkt ``origin`` z punktem ``destination``.
-
-    Ta klasa powinna również implementować metody ``set_origin(point)``, która może zmienić wartość pola ``origin``, ``set_destination(point)``, która zmienia wartość pola ``destination``. Wartości ``_x`` oraz ``_y`` powinny zmienić się odpowiednio.
-
-    Dopisz implementacje metod ``__add__``, ``__sub__``, ``__abs__``, zgodnie z definicją tych operacji dla wektorów. Załóż, że dwa wektory mogą zostać do siebie dodane (lub od siebie odjęte) tylko, jeżeli mają taki sam ``origin``. Pole ``origin`` nowo tworzonego wektora powinno przyjąć taką samą wartość jak dla wektorów na których wykonywana jest operacja. Dopisz implementację metod ``__str__`` oraz ``__repr__``, które wyświetlą ładnie sformatowane wartości ``_x`` oraz ``_y`` wektora.
+    Dopisz do tej klasy dwie metody, które pozwolą obliczyć odległość między dwoma punktami. Jedna z tych metod niech będzie metodą statyczną, która przyjmuje dwa punkty jako argumenty, a zwraca odległość między nimi (przykładowe wywołanie tej metody: ``Punkt.oblicz_odleglosc_miedzy_punktami(punkt_A, punkt_B)``). Druga z tych metod niech będzie zwykłą metodą klasy, która przyjmie jeden punkt jako argument oraz obliczy odległość od tego punktud opunktu na którym jest wykonywana (``punkt_A.oblicz_odleglosc_do(punkt_B)``).
 
 :Zadanie 3:
 
-    Napisz funkcję, która:
-    * zwróci obiekt typu ``Wektor`` na podstawie obiektu typu ``Punkt`` (pole ``origin`` może być ustawione na wartość domyślną, ``destination`` ma takie same współrzędne jak przekazywany obiekt typu ``Punkt``),
-    * zwróci obiekt typu ``Punkt`` na podstawie obiektu typu ``Wektor`` (na podstawie pola ``destination``),
-    * przyjmie obiekt typu ``Punkt`` jako pierwszy argument oraz listę obiektów typu ``Punkt`` jako drugi argument oraz zwróci indeks elementu drugiej listy, do którego pierwszy argument ma najbliżej.
+    Napisz kod, który wykorzystując klasę zaimplementowaną w przykładzie powyżej, wygeneruje listę losowych punktów wokół punktów A i B. Wyrysuj te punkty na wykresie, podobnie jak w przykładzie z modułu "Matematyka".
 
 :Zadanie 4:
 
-    Napisz kod, który wygeneruje listę losowych punktów wokół punktów A i B. Wyrysuj te punkty na wykresie, podobnie jak w przykładzie z modułu "Matematyka".
-
-:Zadanie 5:
-
-    Napisz kod, który zaklasyfikuje te losowo wygenerowane punkty do punktów A oraz B na podstawie odległości. W tym celu wykorzystaj konwersję punktów na wektory, odejmowanie wektorów oraz wyliczanie modułu wektora (wartości bezwzględnej ``abs``). Po klasyfikacji wyrysuj te punkty na wykresie, podobnie jak w przykładzie z modułu "Matematyka".
+    Napisz kod, który zaklasyfikuje te losowo wygenerowane punkty do punktów A oraz B na podstawie odległości. W tym celu wykorzystaj napisane metody do obliczania odległości między punktami. Po klasyfikacji wyrysuj te punkty na wykresie, podobnie jak w przykładzie z modułu "Matematyka".
 
 
 Książka adresowa
