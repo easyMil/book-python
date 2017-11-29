@@ -300,7 +300,7 @@ Zapis i odczyt danych z pliku:
         pickle.dump(PYTHON, pickle_file)
 
     with open(FILE, 'rb') as pickle_file:
-        pp = pickle.load(p)
+        pp = pickle.load(pickle_file)
     print('Przeczytany obiekt:', pp)
 
 
