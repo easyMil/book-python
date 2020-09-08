@@ -171,6 +171,7 @@ Join
     :align: center
 
     Pandas DataFrame Joins
+    Pomylony jest outer join z inner
 
 .. code-block:: python
 
